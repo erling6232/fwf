@@ -15,6 +15,8 @@ include $(configdir)/@common_makefile@
 #   Makefile definitions
 #
 
+bin_PROGRAMS = AlertT
+LDADD = ../libfwf.la
 noinst_LTLIBRARIES = Alert.la
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
