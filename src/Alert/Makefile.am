@@ -21,5 +21,6 @@ noinst_LTLIBRARIES = Alert.la
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
 Alert_la_SOURCES = Alert.c
+dist_man1_MANS = AlertT.man
 dist_man3_MANS = Alert.man
 include_HEADERS = Alert.h  AlertP.h
