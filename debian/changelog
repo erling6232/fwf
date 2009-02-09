@@ -1,0 +1,6 @@
+fwf (4.0.1-1) unstable; urgency=low
+
+  * Build using autoconf/automake.
+  * Compile for x86 and amd64 processors.
+
+ -- Erling Andersen <Erling.Andersen@Helse-Bergen.NO>  Mon, 09 Feb 2009 10:23:59 +0100
