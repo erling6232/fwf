@@ -1,5 +1,5 @@
 #
-#      Makefile definitions for src/Dir
+#      Makefile definitions for lib/Dir
 #
 
 
@@ -15,8 +15,6 @@ include $(configdir)/@common_makefile@
 #   Makefile definitions
 #
 
-bin_PROGRAMS = DirectoryT DirMgrT RegExpT
-LDADD = ../libfwf.la
 noinst_LTLIBRARIES = libDir.la
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
