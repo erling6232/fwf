@@ -17,10 +17,10 @@ include $(configdir)/@common_makefile@
 
 bin_PROGRAMS = SpinLabelT
 LDADD = ../libfwf.la
-noinst_LTLIBRARIES = SpinLabel.la
+noinst_LTLIBRARIES = libSpinLabel.la
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
-SpinLabel_la_SOURCES = SpinLabel.c
+libSpinLabel_la_SOURCES = SpinLabel.c
 dist_man1_MANS = SpinLabelT.man
 dist_man3_MANS = SpinLabel.man
 include_HEADERS = SpinLabel.h  SpinLabelP.h

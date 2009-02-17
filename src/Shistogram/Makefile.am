@@ -17,10 +17,10 @@ include $(configdir)/@common_makefile@
 
 bin_PROGRAMS = ShistogramT
 LDADD = ../libfwf.la
-noinst_LTLIBRARIES = Shistogram.la
+noinst_LTLIBRARIES = libShistogram.la
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
-Shistogram_la_SOURCES = Shistogram.c
+libShistogram_la_SOURCES = Shistogram.c
 dist_man1_MANS = ShistogramT.man
 dist_man3_MANS = Shistogram.man
 include_HEADERS = Shistogram.h  ShistogramP.h

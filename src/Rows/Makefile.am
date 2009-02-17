@@ -17,10 +17,10 @@ include $(configdir)/@common_makefile@
 
 bin_PROGRAMS = RowsT
 LDADD = ../libfwf.la
-noinst_LTLIBRARIES = Rows.la
+noinst_LTLIBRARIES = libRows.la
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
-Rows_la_SOURCES = Rows.c
+libRows_la_SOURCES = Rows.c
 dist_man1_MANS = RowsT.man
 dist_man3_MANS = Rows.man
 include_HEADERS = Rows.h  RowsP.h

@@ -17,10 +17,10 @@ include $(configdir)/@common_makefile@
 
 bin_PROGRAMS = FoldTreeT
 LDADD = ../libfwf.la
-noinst_LTLIBRARIES = FoldingTree.la
+noinst_LTLIBRARIES = libFoldingTree.la
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
-FoldingTree_la_SOURCES = FoldTree.c
+libFoldingTree_la_SOURCES = FoldTree.c
 dist_man1_MANS = FoldTreeT.man
 dist_man3_MANS = FoldTree.man
 include_HEADERS = FoldTree.h  FoldTreeP.h

@@ -17,10 +17,10 @@ include $(configdir)/@common_makefile@
 
 bin_PROGRAMS = ThWheelT
 LDADD = ../libfwf.la
-noinst_LTLIBRARIES = ThumbWheel.la
+noinst_LTLIBRARIES = libThumbWheel.la
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
-ThumbWheel_la_SOURCES = ThWheel.c
+libThumbWheel_la_SOURCES = ThWheel.c
 dist_man1_MANS = ThWheelT.man
 dist_man3_MANS = ThWheel.man
 include_HEADERS = ThWheel.h  ThWheelP.h

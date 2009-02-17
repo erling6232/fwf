@@ -17,10 +17,10 @@ include $(configdir)/@common_makefile@
 
 bin_PROGRAMS = XmTabsT
 LDADD = ../libfwf.la
-noinst_LTLIBRARIES = XmTabs.la
+noinst_LTLIBRARIES = libXmTabs.la
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
-XmTabs_la_SOURCES = XmTabs.c rotated.c
+libXmTabs_la_SOURCES = XmTabs.c rotated.c
 dist_man1_MANS = XmTabsT.man
 dist_man3_MANS = XmTabs.man
 include_HEADERS = XmTabs.h  XmTabsP.h rotated.h

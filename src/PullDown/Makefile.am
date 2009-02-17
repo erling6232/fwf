@@ -17,10 +17,10 @@ include $(configdir)/@common_makefile@
 
 bin_PROGRAMS = PullDownT
 LDADD = ../libfwf.la
-noinst_LTLIBRARIES = PullDown.la
+noinst_LTLIBRARIES = libPullDown.la
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
-PullDown_la_SOURCES = PullDown.c
+libPullDown_la_SOURCES = PullDown.c
 dist_man1_MANS = PullDownT.man
 dist_man3_MANS = PullDown.man
 include_HEADERS = PullDown.h  PullDownP.h

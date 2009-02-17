@@ -17,10 +17,10 @@ include $(configdir)/@common_makefile@
 
 bin_PROGRAMS = ScrListT
 LDADD = ../libfwf.la
-noinst_LTLIBRARIES = ScrolledList.la
+noinst_LTLIBRARIES = libScrolledList.la
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
-ScrolledList_la_SOURCES = ScrList.c
+libScrolledList_la_SOURCES = ScrList.c
 dist_man1_MANS = ScrListT.man
 dist_man3_MANS = ScrList.man
 include_HEADERS = ScrList.h  ScrListP.h

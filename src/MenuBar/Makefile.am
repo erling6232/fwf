@@ -17,10 +17,10 @@ include $(configdir)/@common_makefile@
 
 bin_PROGRAMS = MenuBarT
 LDADD = ../libfwf.la
-noinst_LTLIBRARIES = MenuBar.la
+noinst_LTLIBRARIES = libMenuBar.la
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
-MenuBar_la_SOURCES = MenuBar.c
+libMenuBar_la_SOURCES = MenuBar.c
 dist_man1_MANS = MenuBarT.man
 dist_man3_MANS = MenuBar.man
 include_HEADERS = MenuBar.h  MenuBarP.h

@@ -17,10 +17,10 @@ include $(configdir)/@common_makefile@
 
 bin_PROGRAMS = HdialT
 LDADD = ../libfwf.la
-noinst_LTLIBRARIES = Hdial.la
+noinst_LTLIBRARIES = libHdial.la
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
-Hdial_la_SOURCES = Hdial.c
+libHdial_la_SOURCES = Hdial.c
 dist_man1_MANS = HdialT.man
 dist_man3_MANS = Hdial.man
 include_HEADERS = Hdial.h  HdialP.h

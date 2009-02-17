@@ -115,6 +115,7 @@ AC_SUBST(common_makefile, [Makefile.def])
 AC_CONFIG_FILES([
     Makefile.def
     Makefile
+    src/Makefile
     src/Alert/Makefile
     src/Animator/Makefile
     src/AnsiTerm/Makefile

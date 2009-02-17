@@ -17,10 +17,10 @@ include $(configdir)/@common_makefile@
 
 bin_PROGRAMS = ArtTextT
 LDADD = ../libfwf.la
-noinst_LTLIBRARIES = ArticleText.la
+noinst_LTLIBRARIES = libArticleText.la
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
-ArticleText_la_SOURCES = ArtText.c
+libArticleText_la_SOURCES = ArtText.c
 dist_man1_MANS = ArtTextT.man
 dist_man3_MANS = ArtText.man
 include_HEADERS = ArtText.h  ArtTextP.h

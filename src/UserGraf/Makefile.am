@@ -17,10 +17,10 @@ include $(configdir)/@common_makefile@
 
 bin_PROGRAMS = UGrafT
 LDADD = ../libfwf.la
-noinst_LTLIBRARIES = UserGraf.la
+noinst_LTLIBRARIES = libUserGraf.la
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
-UserGraf_la_SOURCES = \
+libUserGraf_la_SOURCES = \
 	UGraf.c UGrafColor.c UGrafDraw.c UGrafHershey.c UGrafTrans3.c \
 	UGrafTransforms.c XfwfHersheyGlyphs.c
 dist_man1_MANS = UGrafT.man

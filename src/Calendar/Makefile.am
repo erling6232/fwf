@@ -17,10 +17,10 @@ include $(configdir)/@common_makefile@
 
 bin_PROGRAMS = CalendarT
 LDADD = ../libfwf.la
-noinst_LTLIBRARIES = Calendar.la
+noinst_LTLIBRARIES = libCalendar.la
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
-Calendar_la_SOURCES = Calendar.c
+libCalendar_la_SOURCES = Calendar.c
 dist_man1_MANS = CalendarT.man
 dist_man3_MANS = Calendar.man
 include_HEADERS = Calendar.h  CalendarP.h

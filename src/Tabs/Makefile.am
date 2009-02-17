@@ -17,10 +17,10 @@ include $(configdir)/@common_makefile@
 
 bin_PROGRAMS = TabsT
 LDADD = ../libfwf.la
-noinst_LTLIBRARIES = Tabs.la
+noinst_LTLIBRARIES = libTabs.la
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
-Tabs_la_SOURCES = Tabs.c
+libTabs_la_SOURCES = Tabs.c
 dist_man1_MANS = TabsT.man
 dist_man3_MANS = Tabs.man
 include_HEADERS = Tabs.h  TabsP.h

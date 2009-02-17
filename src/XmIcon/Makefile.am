@@ -17,10 +17,10 @@ include $(configdir)/@common_makefile@
 
 bin_PROGRAMS = XmIconT
 LDADD = ../libfwf.la
-noinst_LTLIBRARIES = XmIcon.la
+noinst_LTLIBRARIES = libXmIcon.la
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
-XmIcon_la_SOURCES = XmIcon.c
+libXmIcon_la_SOURCES = XmIcon.c
 dist_man1_MANS = XmIconT.man
 dist_man3_MANS = XmIcon.man
 include_HEADERS = XmIcon.h  XmIconP.h

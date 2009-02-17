@@ -17,10 +17,10 @@ include $(configdir)/@common_makefile@
 
 bin_PROGRAMS = StackT
 LDADD = ../libfwf.la
-noinst_LTLIBRARIES = Stack.la
+noinst_LTLIBRARIES = libStack.la
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
-Stack_la_SOURCES = Stack.c
+libStack_la_SOURCES = Stack.c
 dist_man1_MANS = StackT.man
 dist_man3_MANS = Stack.man
 include_HEADERS = Stack.h  StackP.h
