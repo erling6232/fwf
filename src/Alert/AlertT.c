@@ -3,8 +3,8 @@
 #include <stdio.h>
 #include <X11/Intrinsic.h>
 #include <X11/StringDefs.h>
-#include <Xfwf/Alert.h>
-#include <Xfwf/Button.h>
+#include <Alert.h>
+#include <../Button/Button.h>
 #ifdef X11R5
 #include <X11/Xmu/Editres.h>
 #endif

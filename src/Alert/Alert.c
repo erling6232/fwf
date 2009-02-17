@@ -8,16 +8,16 @@
 #line 349 "Alert.w"
 #include <stdio.h>
 #line 350 "Alert.w"
-#include <Xfwf/Icon.h>
+#include <../Icon/Icon.h>
 #line 351 "Alert.w"
-#include <Xfwf/Label.h>
+#include <../Label/Label.h>
 #line 352 "Alert.w"
-#include <Xfwf/RowCol.h>
+#include <../RowCol/RowCol.h>
 #line 353 "Alert.w"
-#include <Xfwf/Button.h>
+#include <../Button/Button.h>
 #line 354 "Alert.w"
-#include <Xfwf/Converters.h>
-#include <Xfwf/AlertP.h>
+#include <../converters/Converters.h>
+#include <AlertP.h>
 static void _resolve_inheritance(
 #if NeedFunctionPrototypes
 WidgetClass
