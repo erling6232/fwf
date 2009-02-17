@@ -19,4 +19,4 @@ bin_PROGRAMS = ArrowT
 LDADD = ../libfwf.la
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
-dist_man1_MANS = Arrow.man
+dist_man1_MANS = ArrowT.man
