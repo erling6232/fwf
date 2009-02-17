@@ -1,5 +1,5 @@
 #
-#      Makefile definitions for src/Calendar
+#      Makefile definitions for lib/Calendar
 #
 
 
@@ -15,12 +15,9 @@ include $(configdir)/@common_makefile@
 #   Makefile definitions
 #
 
-bin_PROGRAMS = CalendarT
-LDADD = ../libfwf.la
 noinst_LTLIBRARIES = libCalendar.la
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
 libCalendar_la_SOURCES = Calendar.c
-dist_man1_MANS = CalendarT.man
 dist_man3_MANS = Calendar.man
 include_HEADERS = Calendar.h  CalendarP.h
