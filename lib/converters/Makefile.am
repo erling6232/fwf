@@ -1,5 +1,5 @@
 #
-#      Makefile definitions for src/converters
+#      Makefile definitions for lib/converters
 #
 
 

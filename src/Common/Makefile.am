@@ -17,10 +17,6 @@ include $(configdir)/@common_makefile@
 
 bin_PROGRAMS = CommonT
 LDADD = ../libfwf.la
-noinst_LTLIBRARIES = libCommon.la
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
-libCommon_la_SOURCES = Common.c
 dist_man1_MANS = CommonT.man
-dist_man3_MANS = Common.man
-include_HEADERS = Common.h  CommonP.h
