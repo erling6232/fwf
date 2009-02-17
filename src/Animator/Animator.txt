@@ -1,3 +1,0 @@
-Animator (Superclass: XfwfBoard)
-	The Animator widget cycles through a set of images at a fixed
-	rate. The images are usually read from XPM files.

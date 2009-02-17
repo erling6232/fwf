@@ -1,3 +1,0 @@
-XmAnsiTerm (superclass XmManager)
-	A widget to display text with embedded ANSI escape sequences,
-	like an ANSI terminal would. It has a blinking cursor.
