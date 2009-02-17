@@ -1,5 +1,5 @@
 #
-#      Makefile definitions for src/Alert
+#      Makefile definitions for lib/Alert
 #
 
 

@@ -17,10 +17,6 @@ include $(configdir)/@common_makefile@
 
 bin_PROGRAMS = AnimatorT
 LDADD = ../libfwf.la
-noinst_LTLIBRARIES = libAnimator.la
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
-libAnimator_la_SOURCES = Animator.c
 dist_man1_MANS = AnimatorT.man
-dist_man3_MANS = Animator.man
-include_HEADERS = Animator.h  AnimatorP.h
