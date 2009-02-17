@@ -1,3 +1,0 @@
-Common	(superclass: Composite) Common superclass for many other
-	widgets. Defines some resources, types, converters, etc. and
-	implements keyboard traversal.
