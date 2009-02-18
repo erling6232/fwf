@@ -1,5 +1,5 @@
 #
-#      Makefile definitions for src/Stack
+#      Makefile definitions for lib/Stack
 #
 
 
@@ -15,12 +15,9 @@ include $(configdir)/@common_makefile@
 #   Makefile definitions
 #
 
-bin_PROGRAMS = StackT
-LDADD = ../libfwf.la
 noinst_LTLIBRARIES = libStack.la
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
 libStack_la_SOURCES = Stack.c
-dist_man1_MANS = StackT.man
 dist_man3_MANS = Stack.man
 include_HEADERS = Stack.h  StackP.h

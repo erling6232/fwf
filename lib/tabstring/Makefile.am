@@ -1,5 +1,5 @@
 #
-#      Makefile definitions for src/tabstring
+#      Makefile definitions for lib/tabstring
 #
 
 

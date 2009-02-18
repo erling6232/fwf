@@ -1,5 +1,5 @@
 #
-#      Makefile definitions for src/Tabs
+#      Makefile definitions for lib/Tabs
 #
 
 
@@ -15,12 +15,9 @@ include $(configdir)/@common_makefile@
 #   Makefile definitions
 #
 
-bin_PROGRAMS = TabsT
-LDADD = ../libfwf.la
 noinst_LTLIBRARIES = libTabs.la
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
 libTabs_la_SOURCES = Tabs.c
-dist_man1_MANS = TabsT.man
 dist_man3_MANS = Tabs.man
 include_HEADERS = Tabs.h  TabsP.h

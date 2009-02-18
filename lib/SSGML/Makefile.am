@@ -1,5 +1,5 @@
 #
-#      Makefile definitions for src/SSGML
+#      Makefile definitions for lib/SSGML
 #
 
 
@@ -15,12 +15,9 @@ include $(configdir)/@common_makefile@
 #   Makefile definitions
 #
 
-bin_PROGRAMS = SSGMLT
-LDADD = ../libfwf.la
 noinst_LTLIBRARIES = libSSGML.la
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
 libSSGML_la_SOURCES = SSGML.c
-dist_man1_MANS = SSGMLT.man
 dist_man3_MANS = SSGML.man
 include_HEADERS = SSGML.h  SSGMLP.h
