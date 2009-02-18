@@ -17,10 +17,6 @@ include $(configdir)/@common_makefile@
 
 bin_PROGRAMS = EnforcerT
 LDADD = ../libfwf.la
-noinst_LTLIBRARIES = libEnforcer.la
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
-libEnforcer_la_SOURCES = Enforcer.c
 dist_man1_MANS = EnforcerT.man
-dist_man3_MANS = Enforcer.man
-include_HEADERS = Enforcer.h  EnforcerP.h
