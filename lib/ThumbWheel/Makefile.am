@@ -1,5 +1,5 @@
 #
-#      Makefile definitions for src/ThumbWheel
+#      Makefile definitions for lib/ThumbWheel
 #
 
 
@@ -15,12 +15,9 @@ include $(configdir)/@common_makefile@
 #   Makefile definitions
 #
 
-bin_PROGRAMS = ThWheelT
-LDADD = ../libfwf.la
 noinst_LTLIBRARIES = libThumbWheel.la
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
 libThumbWheel_la_SOURCES = ThWheel.c
-dist_man1_MANS = ThWheelT.man
 dist_man3_MANS = ThWheel.man
 include_HEADERS = ThWheel.h  ThWheelP.h

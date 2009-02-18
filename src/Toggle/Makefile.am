@@ -17,10 +17,6 @@ include $(configdir)/@common_makefile@
 
 bin_PROGRAMS = ToggleT
 LDADD = ../libfwf.la
-noinst_LTLIBRARIES = libToggle.la
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
-libToggle_la_SOURCES = Toggle.c
 dist_man1_MANS = ToggleT.man
-dist_man3_MANS = Toggle.man
-include_HEADERS = Toggle.h  ToggleP.h
