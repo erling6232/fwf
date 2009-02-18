@@ -17,10 +17,6 @@ include $(configdir)/@common_makefile@
 
 bin_PROGRAMS = PromptT
 LDADD = ../libfwf.la
-noinst_LTLIBRARIES = libPrompt.la
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
-libPrompt_la_SOURCES = Prompt.c
 dist_man1_MANS = PromptT.man
-dist_man3_MANS = Prompt.man
-include_HEADERS = Prompt.h  PromptP.h

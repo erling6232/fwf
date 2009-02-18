@@ -37,7 +37,6 @@ libfwf_la_LIBADD = \
 	Label/libLabel.la \
 	Mdial/libMdial.la \
 	MenuBar/libMenuBar.la \
-	misc/libmisc.la \
 	MultiList/libMultiList.la \
 	OptButton/libOptButton.la \
 	Pager/libPager.la \
@@ -112,7 +111,6 @@ SUBDIRS = \
 	Label/ \
 	Mdial/ \
 	MenuBar/ \
-	misc/ \
 	MultiList/ \
 	OptButton/ \
 	Pager/ \

@@ -17,10 +17,6 @@ include $(configdir)/@common_makefile@
 
 bin_PROGRAMS = PcBarT
 LDADD = ../libfwf.la
-noinst_LTLIBRARIES = libPcBar.la
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
-libPcBar_la_SOURCES = PcBar.c
 dist_man1_MANS = PcBarT.man
-dist_man3_MANS = PcBar.man
-include_HEADERS = PcBar.h  PcBarP.h

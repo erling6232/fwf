@@ -1,5 +1,5 @@
 #
-#      Makefile definitions for src/misc
+#      Makefile definitions for lib/misc
 #
 
 

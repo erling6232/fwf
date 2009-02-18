@@ -17,10 +17,6 @@ include $(configdir)/@common_makefile@
 
 bin_PROGRAMS = PagerT
 LDADD = ../libfwf.la
-noinst_LTLIBRARIES = libPager.la
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
-libPager_la_SOURCES = Pager.c
 dist_man1_MANS = PagerT.man
-dist_man3_MANS = Pager.man
-include_HEADERS = Pager.h  PagerP.h

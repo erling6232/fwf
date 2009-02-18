@@ -17,10 +17,6 @@ include $(configdir)/@common_makefile@
 
 bin_PROGRAMS = OptButtonT
 LDADD = ../libfwf.la
-noinst_LTLIBRARIES = libOptButton.la
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
-libOptButton_la_SOURCES = OptButton.c
 dist_man1_MANS = OptButtonT.man
-dist_man3_MANS = OptButton.man
-include_HEADERS = OptButton.h  OptButtonP.h
