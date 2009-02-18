@@ -49,7 +49,6 @@ libfwf_la_LIBADD = \
 	Rheostat/libRheostat.la \
 	RowCol/libRowCol.la \
 	Rows/libRows.la \
-	scroll/libscroll.la \
 	Scrollbar/libScrollbar.la \
 	ScrolledList/libScrolledList.la \
 	ScrollWin/libScrollWin.la \
@@ -123,7 +122,6 @@ SUBDIRS = \
 	Rheostat/ \
 	RowCol/ \
 	Rows/ \
-	scroll/ \
 	Scrollbar/ \
 	ScrolledList/ \
 	ScrollWin/ \

@@ -1,5 +1,5 @@
 #
-#      Makefile definitions for src/scroll
+#      Makefile definitions for lib/scroll
 #
 
 

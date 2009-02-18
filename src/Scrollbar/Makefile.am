@@ -17,10 +17,6 @@ include $(configdir)/@common_makefile@
 
 bin_PROGRAMS = ScrollbarT
 LDADD = ../libfwf.la
-noinst_LTLIBRARIES = libScrollbar.la
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
-libScrollbar_la_SOURCES = Scrollbar.c
 dist_man1_MANS = ScrollbarT.man
-dist_man3_MANS = Scrollbar.man
-include_HEADERS = Scrollbar.h  ScrollbarP.h

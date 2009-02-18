@@ -1,5 +1,5 @@
 #
-#      Makefile definitions for src/RowCol
+#      Makefile definitions for lib/RowCol
 #
 
 
@@ -15,12 +15,9 @@ include $(configdir)/@common_makefile@
 #   Makefile definitions
 #
 
-bin_PROGRAMS = RowColT
-LDADD = ../libfwf.la
 noinst_LTLIBRARIES = libRowCol.la
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
 libRowCol_la_SOURCES = RowCol.c
-dist_man1_MANS = RowColT.man
 dist_man3_MANS = RowCol.man
 include_HEADERS = RowCol.h  RowColP.h
