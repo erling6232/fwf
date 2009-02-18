@@ -17,10 +17,6 @@ include $(configdir)/@common_makefile@
 
 bin_PROGRAMS = RheostatT
 LDADD = ../libfwf.la
-noinst_LTLIBRARIES = libRheostat.la
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
-libRheostat_la_SOURCES = Rheostat.c
 dist_man1_MANS = RheostatT.man
-dist_man3_MANS = Rheostat.man
-include_HEADERS = Rheostat.h  RheostatP.h
