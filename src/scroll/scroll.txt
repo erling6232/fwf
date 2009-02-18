@@ -1,1 +1,0 @@
-scroll		 A description of the FWF scrolling interface protocol (SWIP).
