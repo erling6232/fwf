@@ -1,5 +1,5 @@
 #
-#      Makefile definitions for src/Slider2
+#      Makefile definitions for lib/Slider2
 #
 
 
@@ -15,12 +15,9 @@ include $(configdir)/@common_makefile@
 #   Makefile definitions
 #
 
-bin_PROGRAMS = Slider2T
-LDADD = ../libfwf.la
 noinst_LTLIBRARIES = libSlider2.la
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
 libSlider2_la_SOURCES = Slider2.c
-dist_man1_MANS = Slider2T.man
 dist_man3_MANS = Slider2.man
 include_HEADERS = Slider2.h  Slider2P.h
