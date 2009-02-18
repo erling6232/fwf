@@ -15,7 +15,7 @@ include $(configdir)/@common_makefile@
 #   Makefile definitions
 #
 
-bin_PROGRAMS = FileCompT.c
+bin_PROGRAMS = FileCompT sqtest
 LDADD = ../libfwf.la
 AM_CPPFLAGS = -I$(top_srcdir)/include
 

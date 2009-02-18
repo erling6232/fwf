@@ -1,6 +1,7 @@
 cvs checkout fwf
 mv fwf fwf-4.0.1
 cd fwf-4.0.1
+cp src/*/*.h include/Xfwf
 dpkg-buildpackage -j4 -rfakeroot -us -uc
 
 # DEB_BUILD_OPTIONS="noopt nostrip" dpkg-buildpackage -j4 -rfakeroot -us -uc

@@ -1,7 +1,7 @@
 # Prelude
 AC_PREREQ(2.50)
 AC_INIT([fwf], [4.0.1], [Erling.Andersen@Helse-Bergen.NO])
-AC_CONFIG_SRCDIR([src/Common/Common.h])
+AC_CONFIG_SRCDIR([lib/Common/Common.h])
 AC_CONFIG_HEADER([config.h])
 AC_CONFIG_MACRO_DIR([m4])
 
@@ -116,6 +116,80 @@ AC_SUBST(common_makefile, [Makefile.def])
 AC_CONFIG_FILES([
     Makefile.def
     Makefile
+    lib/Makefile
+    lib/Alert/Makefile
+    lib/Animator/Makefile
+    lib/AnsiTerm/Makefile
+    lib/Array/Makefile
+    lib/Arrow/Makefile
+    lib/ArticleText/Makefile
+    lib/Board/Makefile
+    lib/Button/Makefile
+    lib/Calendar/Makefile
+    lib/Canvas/Makefile
+    lib/CircPerc/Makefile
+    lib/Cmap/Makefile
+    lib/Common/Makefile
+    lib/converters/Makefile
+    lib/Dir/Makefile
+    lib/Enforcer/Makefile
+    lib/Entry/Makefile
+    lib/EzMenu/Makefile
+    lib/FileChooser/Makefile
+    lib/FileComp/Makefile
+    lib/FileLister/Makefile
+    lib/FileSelector/Makefile
+    lib/FoldingTree/Makefile
+    lib/Frame/Makefile
+    lib/FText/Makefile
+    lib/Group/Makefile
+    lib/Hdial/Makefile
+    lib/Histogram/Makefile
+    lib/HScrollb/Makefile
+    lib/HTML2/Makefile
+    lib/Icon/Makefile
+    lib/IconBox/Makefile
+    lib/ImageSelector/Makefile
+    lib/Label/Makefile
+    lib/Mdial/Makefile
+    lib/MenuBar/Makefile
+    lib/misc/Makefile
+    lib/MultiList/Makefile
+    lib/OptButton/Makefile
+    lib/Pager/Makefile
+    lib/PcBar/Makefile
+    lib/PieMenu/Makefile
+    lib/PixelEditor/Makefile
+    lib/Prompt/Makefile
+    lib/PullDown/Makefile
+    lib/RadioGroup/Makefile
+    lib/Rheostat/Makefile
+    lib/RowCol/Makefile
+    lib/Rows/Makefile
+    lib/scroll/Makefile
+    lib/Scrollbar/Makefile
+    lib/ScrolledList/Makefile
+    lib/ScrollWin/Makefile
+    lib/ScrollWin3/Makefile
+    lib/Shistogram/Makefile
+    lib/Slider2/Makefile
+    lib/Slider4/Makefile
+    lib/SpinLabel/Makefile
+    lib/SSGML/Makefile
+    lib/Stack/Makefile
+    lib/Tabs/Makefile
+    lib/tabstring/Makefile
+    lib/TextMenu/Makefile
+    lib/TextOut/Makefile
+    lib/ThumbWheel/Makefile
+    lib/ThumbWheel2/Makefile
+    lib/Toggle/Makefile
+    lib/UserGraf/Makefile
+    lib/VScrollb/Makefile
+    lib/XmAnsiTerm/Makefile
+    lib/XmIcon/Makefile
+    lib/XmPager/Makefile
+    lib/XmTabs/Makefile
     src/Makefile
     src/Alert/Makefile
     src/Animator/Makefile
