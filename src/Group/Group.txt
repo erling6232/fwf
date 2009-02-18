@@ -1,3 +1,0 @@
-Group	(superclass: XfwfRowCol) Arranges children in rows and columns
-	with a frame around it and a title. It has special support for
-	XfwfToggleButtons, optionally turning them into radio buttons.
