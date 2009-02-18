@@ -15,7 +15,7 @@ include $(configdir)/@common_makefile@
 #   Makefile definitions
 #
 
-bin_PROGRAMS = ThWheelT
+bin_PROGRAMS = ThWheelT ThWheelT2
 LDADD = ../libfwf.la
 noinst_LTLIBRARIES = libThumbWheel.la
 AM_CPPFLAGS = -I$(top_srcdir)/include
