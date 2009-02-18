@@ -1,4 +1,0 @@
-IconBox	(Superclass: XfwfBoard) An IconBox is a surface on which
-	labeled icons are displayed. The icons can be dragged and
-	dropped. The icons and the labels are given as a resource. An
-	IconBox could be used, e.g., in a file manager.
