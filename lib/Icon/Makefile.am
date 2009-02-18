@@ -1,5 +1,5 @@
 #
-#      Makefile definitions for src/Icon
+#      Makefile definitions for lib/Icon
 #
 
 
@@ -15,12 +15,9 @@ include $(configdir)/@common_makefile@
 #   Makefile definitions
 #
 
-bin_PROGRAMS = IconT
-LDADD = ../libfwf.la
 noinst_LTLIBRARIES = libIcon.la
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
 libIcon_la_SOURCES = Icon.c
-dist_man1_MANS = IconT.man
 dist_man3_MANS = Icon.man
 include_HEADERS = Icon.h  IconP.h
