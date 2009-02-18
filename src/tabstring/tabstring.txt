@@ -1,2 +1,0 @@
-tabstring	 These are extended versions of X's DrawString functions
-		which allow tabs to be in the strings.

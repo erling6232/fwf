@@ -1,3 +1,0 @@
-Stack		 The stack widget is an X toolkit (and Motif if compiled right)
-		compatible widget that is a subclass of constraint.  The stack
-		widget allows only one child to be managed at a time.
