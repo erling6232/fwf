@@ -17,10 +17,6 @@ include $(configdir)/@common_makefile@
 
 bin_PROGRAMS = HTML2T
 LDADD = ../libfwf.la
-noinst_LTLIBRARIES = libHTML2.la
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
-libHTML2_la_SOURCES = HTML2.c
 dist_man1_MANS = HTML2T.man
-dist_man3_MANS = HTML2.man
-include_HEADERS = HTML2.h  HTML2P.h
