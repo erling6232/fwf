@@ -1,2 +1,0 @@
-XmTabs	(superclass: XmPrimitive) A series of tabs similar to the
-	alphabet tabs along the top of index cards.
