@@ -458,7 +458,7 @@ static void set_abs_location(self,flags,x,y,w,h)Widget self;unsigned  int  flags
 #endif
 #line 214 "Board.w"
 {
-    if (flags & (CWX | CWY | CWWidth | CWHeight) == 0) return;
+    if (flags & ((CWX | CWY | CWWidth | CWHeight) == 0)) return;
     if (flags & CWX) ((XfwfBoardWidget)self)->core.x = x;
     if (flags & CWY) ((XfwfBoardWidget)self)->core.y = y;
     if (flags & CWWidth) ((XfwfBoardWidget)self)->core.width = w;
@@ -513,8 +513,7 @@ static XtGeometryResult  geometry_manager(Widget  child,XtWidgetGeometry * reque
 #line 167 "Board.w"
 static XtGeometryResult  geometry_manager(child,request,reply)Widget  child;XtWidgetGeometry * request;XtWidgetGeometry * reply;
 #endif
-{ Widget self = XtParent(child); {
-    /* Widget $ = XtParent(child); */
+{
     Dimension wd, ht, bw;
     Position x, y;
 
@@ -528,7 +527,6 @@ static XtGeometryResult  geometry_manager(child,request,reply)Widget  child;XtWi
 
     XtConfigureWidget(child, x, y, wd, ht, bw);
     return XtGeometryDone;
-}
 }
 #line 290 "Board.w"
 /*ARGSUSED*/
