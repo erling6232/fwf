@@ -16,7 +16,7 @@ include $(configdir)/@common_makefile@
 #
 
 bin_PROGRAMS = ScrWin3T
-LDADD = ../libfwf.la
+LDADD = ../../lib/libfwf.la -lXpm -lXaw
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
 dist_man1_MANS = ScrWin3T.man

@@ -15,7 +15,6 @@ include $(configdir)/@common_makefile@
 #   Makefile definitions
 #
 
-noinst_LTLIBRARIES = libEzMenu.la
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
 dist_man1_MANS = EzMenuT.man

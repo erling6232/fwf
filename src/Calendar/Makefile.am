@@ -16,7 +16,7 @@ include $(configdir)/@common_makefile@
 #
 
 bin_PROGRAMS = CalendarT
-LDADD = ../libfwf.la
+LDADD = ../../lib/libfwf.la -lXpm -lXaw
 noinst_LTLIBRARIES = libCalendar.la
 AM_CPPFLAGS = -I$(top_srcdir)/include
 

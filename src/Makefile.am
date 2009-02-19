@@ -2,7 +2,6 @@ SUBDIRS = \
 	Board/ \
 	Button/ \
 	Common/ \
-	converters/ \
 	Dir/ \
 	FileSelector/ \
 	Frame/ \
