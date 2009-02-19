@@ -1218,7 +1218,7 @@ va_dcl	 /* stupid define already has a ; on it */
 	va_list parms;
 	char dest[MAXSTRING];
 
-	va_start(parms);
+	va_start(parms, _format);
 	vsprintf(dest, _format, parms);
 	va_end(parms);
 
