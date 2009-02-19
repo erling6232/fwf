@@ -19,4 +19,4 @@ noinst_LTLIBRARIES = libscroll.la
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
 libscroll_la_SOURCES = scroll.c
-include_HEADERS = scroll.h  scrollP.h
+include_HEADERS = scroll.h
