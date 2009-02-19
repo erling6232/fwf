@@ -18,7 +18,6 @@ libfwf_la_LIBADD = \
 	Dir/libDir.la \
 	Enforcer/libEnforcer.la \
 	Entry/libEntry.la \
-	EzMenu/libEzMenu.la \
 	FileChooser/libFileChooser.la \
 	FileComp/libFileComp.la \
 	FileLister/libFileLister.la \
@@ -93,7 +92,6 @@ SUBDIRS = \
 	Dir/ \
 	Enforcer/ \
 	Entry/ \
-	EzMenu/ \
 	FileChooser/ \
 	FileComp/ \
 	FileLister/ \

@@ -134,7 +134,6 @@ AC_CONFIG_FILES([
     lib/Dir/Makefile
     lib/Enforcer/Makefile
     lib/Entry/Makefile
-    lib/EzMenu/Makefile
     lib/FileChooser/Makefile
     lib/FileComp/Makefile
     lib/FileLister/Makefile
@@ -207,7 +206,6 @@ AC_CONFIG_FILES([
     src/Dir/Makefile
     src/Enforcer/Makefile
     src/Entry/Makefile
-    src/EzMenu/Makefile
     src/FileChooser/Makefile
     src/FileComp/Makefile
     src/FileLister/Makefile

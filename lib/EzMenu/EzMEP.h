@@ -55,9 +55,14 @@
  ************************************************************/
 
 typedef struct _XfwfEzMEClassPart {
+  /*
   void (*highlight)();
   void (*unhighlight)();
   void (*notify)();	
+  */
+  XtWidgetProc highlight;
+  XtWidgetProc unhighlight;
+  XtWidgetProc notify;
   XtPointer extension;
 } XfwfEzMEClassPart;
 
