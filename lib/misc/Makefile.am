@@ -20,4 +20,4 @@ AM_CPPFLAGS = -I$(top_srcdir)/include
 
 libmisc_la_SOURCES = VarArgs.c
 dist_man3_MANS = VarArgs.man
-include_HEADERS = VarArgs.h  VarArgsP.h
+include_HEADERS = VarArgs.h
