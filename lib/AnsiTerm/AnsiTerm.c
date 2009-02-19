@@ -1191,7 +1191,7 @@ static XtResource resources[] = {
 #line 96 "AnsiTerm.w"
 {XtNscrollCallback,XtCScrollCallback,XtRCallback,sizeof(((XfwfAnsiTermRec*)NULL)->xfwfAnsiTerm.scrollCallback),XtOffsetOf(XfwfAnsiTermRec,xfwfAnsiTerm.scrollCallback),XtRImmediate,(XtPointer)NULL },
 #line 103 "AnsiTerm.w"
-{XtNscrollResponse,XtCScrollResponse,XtRXTCallbackProc,sizeof(((XfwfAnsiTermRec*)NULL)->xfwfAnsiTerm.scrollResponse),XtOffsetOf(XfwfAnsiTermRec,xfwfAnsiTerm.scrollResponse),XtRImmediate,(XtPointer)scroll_response ;},
+{XtNscrollResponse,XtCScrollResponse,XtRXTCallbackProc,sizeof(((XfwfAnsiTermRec*)NULL)->xfwfAnsiTerm.scrollResponse),XtOffsetOf(XfwfAnsiTermRec,xfwfAnsiTerm.scrollResponse),XtRImmediate,(XtPointer)scroll_response },
 };
 
 XfwfAnsiTermClassRec xfwfAnsiTermClassRec = {
