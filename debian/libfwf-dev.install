@@ -1,2 +1,2 @@
-debian/tmp/usr/include/Xfwf
+debian/tmp/usr/include/*.h
 debian/tmp/usr/lib/libfwf.*a

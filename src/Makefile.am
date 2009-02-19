@@ -15,6 +15,5 @@ SUBDIRS = \
 	RowCol/ \
 	Rows/ \
 	ScrolledList/ \
-	tabstring/ \
 	TextMenu/ \
 	Toggle/
