@@ -37,7 +37,7 @@ typedef struct _XColorContext *XCC;
 
 
 
-#if NeedFunctionProtoTypes
+#if NeedFunctionPrototypes
 
 extern XCC XCCCreate(Display *_dpy, Visual *_visual, int _usePrivateColormap, 
 						int _useStdCmaps, Atom _stdColormapAtom, Colormap *_colormap);
@@ -70,7 +70,7 @@ extern Display *XCCGetDisplay();
 extern int XCCQueryColor();
 extern int XCCQueryColors();
 
-#endif /* NeedFunctionProtoTypes */
+#endif /* NeedFunctionPrototypes */
 
 
 #endif /* _XCC_H */

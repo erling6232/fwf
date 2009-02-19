@@ -39,18 +39,18 @@
 
 #define NUMBER(a) ((int)(sizeof(a)/sizeof(a[0])))
 
-#if NeedFunctionProtoTypes
+#if NeedFunctionPrototypes
 static int _pixelSort(const void *_arg1, const void *_arg2)
 #else
 static int _pixelSort(_arg1, _arg2)
 void *_arg1;
 void *_arg2;
-#endif /* NeedFunctionProtoTypes */
+#endif /* NeedFunctionPrototypes */
 {
 	return ( ((XColor *)_arg1)->pixel - ((XColor *)_arg2)->pixel);
 }
 
-#if NeedFunctionProtoTypes
+#if NeedFunctionPrototypes
 static void _queryColors(XCC _xcc)
 #else
 static void _queryColors(_xcc)
@@ -80,14 +80,14 @@ XCC _xcc;
 ** the one we are using!
 */
 
-#if NeedFunctionProtoTypes
+#if NeedFunctionPrototypes
 static int _findGoodCube(XCC _xcc, Atom _atom, XStandardColormap *_matchedCube)
 #else
 static int _findGoodCube(_xcc, _atom, _matchedCube)
 XCC _xcc;
 Atom _atom;
 XStandardColormap *_matchedCube;
-#endif /* NeedFunctionProtoTypes */
+#endif /* NeedFunctionPrototypes */
 {
 	XStandardColormap *cubes, *match;
 	int status;
@@ -140,13 +140,13 @@ Atom GrayAtomList[] =
 	XA_RGB_DEFAULT_MAP,
 };
 
-#if NeedFunctionProtoTypes
+#if NeedFunctionPrototypes
 static int _lookForStdCmap(XCC _xcc, Atom _atom)
 #else
 static int _lookForStdCmap(_xcc, _atom)
 XCC _xcc;
 Atom _atom;
-#endif /* NeedFunctionProtoTypes */
+#endif /* NeedFunctionPrototypes */
 {
 	int status;
 	int i;
@@ -220,7 +220,7 @@ Atom _atom;
 ** If we die, we go to the world of B+W
 */
 
-#if NeedFunctionProtoTypes
+#if NeedFunctionPrototypes
 static void _initBW(XCC _xcc)
 #else
 static void _initBW(_xcc)
@@ -251,12 +251,12 @@ XCC _xcc;
 ** that each lookup is /= 2 of the previous.
 */
 
-#if NeedFunctionProtoTypes
+#if NeedFunctionPrototypes
 static void _initGray(XCC _xcc)
 #else
 static void _initGray(_xcc)
 XCC _xcc;
-#endif /* NeedFunctionProtoTypes */
+#endif /* NeedFunctionPrototypes */
 {
 	XColor *clrs, *cstart;
 	register int i;
@@ -314,12 +314,12 @@ retryGray:
 ** These are the color visuals that require a CLUT
 */
 
-#if NeedFunctionProtoTypes
+#if NeedFunctionPrototypes
 static void _initColor(XCC _xcc)
 #else
 static void _initColor(_xcc)
 XCC _xcc;
-#endif /* NeedFunctionProtoTypes */
+#endif /* NeedFunctionPrototypes */
 {
 	XColor *clrs, *cstart;
 	register int red, green, blue;
@@ -403,12 +403,12 @@ retryColor:
 ** Get our shifts and masks
 */
 
-#if NeedFunctionProtoTypes
+#if NeedFunctionPrototypes
 static void _initTrueColor(XCC _xcc)
 #else
 static void _initTrueColor(_xcc)
 XCC _xcc;
-#endif /* NeedFunctionProtoTypes */
+#endif /* NeedFunctionPrototypes */
 {
 	register unsigned long rmask, gmask, bmask;
 
@@ -466,12 +466,12 @@ XCC _xcc;
 ** a true color! USE the CLUT!!!
 */
 
-#if NeedFunctionProtoTypes
+#if NeedFunctionPrototypes
 static void _initDirectColor(XCC _xcc)
 #else
 static void _initDirectColor(_xcc)
 XCC _xcc;
-#endif /* NeedFunctionProtoTypes */
+#endif /* NeedFunctionPrototypes */
 {
 	int n, count;
 	XColor *clrs, *cstart;
@@ -563,14 +563,14 @@ retrydirect:
 	XFree(cstart);
 }
 
-#if NeedFunctionProtoTypes
+#if NeedFunctionPrototypes
 XCC XCCMonoCreate(Display *_dpy, Visual *_visual, Colormap _colormap)
 #else
 XCC XCCMonoCreate(_dpy, _visual, _colormap)
 Display *_dpy;
 Visual *_visual;
 Colormap _colormap;
-#endif /* NeedFunctionProtoTypes */
+#endif /* NeedFunctionPrototypes */
 {
 	XCC xcc;
 	XVisualInfo visInfo;
@@ -598,7 +598,7 @@ Colormap _colormap;
 }
 
 
-#if NeedFunctionProtoTypes
+#if NeedFunctionPrototypes
 XCC XCCCreate(Display *_dpy, Visual *_visual, int _usePrivateColormap, int _useStdCmaps, 
 							Atom _stdCmapAtom, Colormap *_colormap)
 #else
@@ -609,7 +609,7 @@ int _usePrivateColormap;
 int _useStdCmaps;
 Atom _stdCmapAtom;
 Colormap *_colormap;
-#endif /* NeedFunctionProtoTypes */
+#endif /* NeedFunctionPrototypes */
 {
 	XCC xcc;
 	int n;
@@ -694,12 +694,12 @@ Colormap *_colormap;
 ** This doesn't currently free black/white. Hmm...
 */
 
-#if NeedFunctionProtoTypes
+#if NeedFunctionPrototypes
 void  XCCFree(XCC _xcc)
 #else
 void XCCFree(_xcc)
 XCC _xcc;
-#endif /* NeedFunctionProtoTypes */
+#endif /* NeedFunctionPrototypes */
 {
 	if (_xcc == NULL)
 		return;
@@ -720,7 +720,7 @@ XCC _xcc;
 	XFree((char *)_xcc);
 }
 
-#if NeedFunctionProtoTypes
+#if NeedFunctionPrototypes
 unsigned long XCCGetPixel(XCC _xcc, unsigned int _red, unsigned int _green, unsigned int _blue)
 #else
 unsigned long XCCGetPixel(_xcc, _red, _green, _blue)
@@ -728,7 +728,7 @@ XCC _xcc;
 unsigned int _red;
 unsigned int _green;
 unsigned int _blue;
-#endif /* NeedFunctionProtoTypes */
+#endif /* NeedFunctionPrototypes */
 {
 	unsigned long ired, igreen, iblue;
 	XColor color;
@@ -804,22 +804,22 @@ unsigned int _blue;
 	}
 }
 
-#if NeedFunctionProtoTypes
+#if NeedFunctionPrototypes
 int XCCGetNumColors(XCC _xcc)
 #else
 int XCCGetNumColors(_xcc)
 XCC _xcc;
-#endif /* NeedFunctionProtoTypes */
+#endif /* NeedFunctionPrototypes */
 {
 	return _xcc->numColors;
 }
 
-#if NeedFunctionProtoTypes
+#if NeedFunctionPrototypes
 Colormap XCCGetColormap(XCC _xcc)
 #else
 Colormap XCCGetColormap(_xcc)
 XCC _xcc;
-#endif /* NeedFunctionProtoTypes */
+#endif /* NeedFunctionPrototypes */
 {
 	if (_xcc)
 		return _xcc->colormap;
@@ -827,12 +827,12 @@ XCC _xcc;
 		return (Colormap)0;
 }
 
-#if NeedFunctionProtoTypes
+#if NeedFunctionPrototypes
 Visual *XCCGetVisual(XCC _xcc)
 #else
 Visual *XCCGetVisual(_xcc)
 XCC _xcc;
-#endif /* NeedFunctionProtoTypes */
+#endif /* NeedFunctionPrototypes */
 {
 	if (_xcc)
 		return _xcc->visual;
@@ -840,12 +840,12 @@ XCC _xcc;
 		return (Visual *)NULL;
 }
 
-#if NeedFunctionProtoTypes
+#if NeedFunctionPrototypes
 XVisualInfo *XCCGetVisualInfo(XCC _xcc)
 #else
 XVisualInfo *XCCGetVisualInfo(_xcc)
 XCC _xcc;
-#endif /* NeedFunctionProtoTypes */
+#endif /* NeedFunctionPrototypes */
 {
 	if (_xcc)
 		return _xcc->visualInfo;
@@ -853,14 +853,14 @@ XCC _xcc;
 		return (XVisualInfo *)NULL;
 }
 
-#if NeedFunctionProtoTypes
+#if NeedFunctionPrototypes
 int XCCQueryColors(XCC _xcc, XColor *_colors, int _numColors)
 #else
 int XCCQueryColors(_xcc, _colors, _numColors)
 XCC _xcc;
 XColor *_colors;
 int _numColors;
-#endif /* NeedFunctionProtoTypes */
+#endif /* NeedFunctionPrototypes */
 {
 	int i;
 	XColor *tc, *curTC;
@@ -937,24 +937,24 @@ int _numColors;
 	return 1;
 }
 
-#if NeedFunctionProtoTypes
+#if NeedFunctionPrototypes
 int XCCQueryColor(XCC _xcc, XColor *_color)
 #else
 int XCCQueryColor(_xcc, _color)
 XCC _xcc;
 XColor *_color;
-#endif /* NeedFunctionProtoTypes */
+#endif /* NeedFunctionPrototypes */
 {
 	return XCCQueryColors(_xcc, _color, 1);
 }
 
 
-#if NeedFunctionProtoTypes
+#if NeedFunctionPrototypes
 Display *XCCGetDisplay(XCC _xcc)
 #else
 Display *XCCGetDisplay(_xcc)
 XCC _xcc;
-#endif /* NeedFunctionProtoTypes */
+#endif /* NeedFunctionPrototypes */
 {
 	if (_xcc)
 		return _xcc->dpy;

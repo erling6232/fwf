@@ -32,12 +32,12 @@
 #endif
 
 #include <math.h>
-#include <varargs.h>
+#include <stdarg.h>
 
 #include "CmapP.h"
 
 /* For actions */
-#if NeedFunctionProtoTypes
+#if NeedFunctionPrototypes
 static void left(CmapWidget _cw, XEvent *_event, String *_argv, int *_argc);
 static void right(CmapWidget _cw, XEvent *_event, String *_argv, int *_argc);
 static void up(CmapWidget _cw, XEvent *_event, String *_argv, int *_argc);
@@ -52,7 +52,7 @@ static void wselect();
 #endif
 
 /* For widget internals */
-#if NeedFunctionProtoTypes
+#if NeedFunctionPrototypes
 static void initialize(CmapWidget _request, CmapWidget _new);
 static void realize(CmapWidget _cw, XtValueMask *_xvm, XSetWindowAttributes *_xswa);
 static void resize(CmapWidget _cw);
@@ -63,7 +63,7 @@ static Boolean setValues(CmapWidget _current, CmapWidget _request, CmapWidget _n
 static void borderHighlight(CmapWidget _cw);
 static void borderUnhighlight(CmapWidget _cw);
 #endif /* MOTIF */
-static void myXtWarning();
+static void myXtWarning(char* _format, ...)
 #else
 static void initialize();
 static void realize();
@@ -79,7 +79,7 @@ static void myXtWarning();
 #endif
 
 /* For Misc */
-#if NeedFunctionProtoTypes
+#if NeedFunctionPrototypes
 static int xYtoBox(CmapWidget _cw, int _x, int _y);
 static void reString(CmapWidget _cw);
 static void drawLabel(CmapWidget _cw, GC _gc);
@@ -1207,9 +1207,13 @@ int *_argc;
 
 #define MAXSTRING 300
 
+#if NeedFunctionPrototypes
+static void myXtWarning(char* _format, ...)
+#else
 static void myXtWarning(_format, va_alist)
 char *_format; 
 va_dcl	 /* stupid define already has a ; on it */
+#endif
 {
 	va_list parms;
 	char dest[MAXSTRING];

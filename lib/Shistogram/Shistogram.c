@@ -46,14 +46,14 @@
 #include <Xfwf/Shistogram.h>
 
 /* For actions */
-#if NeedFunctionProtoTypes
+#if NeedFunctionPrototypes
 static void Select(ShistogramWidget _w, XEvent *_event, String *_argv, int *_argc);
 #else
 static void Select();
 #endif
 
 /* For widget internals */
-#if NeedFunctionProtoTypes
+#if NeedFunctionPrototypes
 static void Initialize(ShistogramWidget _request, ShistogramWidget _new);
 static void Realize(ShistogramWidget _w, XtValueMask *_xvm, XSetWindowAttributes *_xswa);
 static void Resize(ShistogramWidget _w);
@@ -72,7 +72,7 @@ static void MyXtWarning();
 #endif
 
 /* Misc */
-#if NeedFunctionProtoTypes
+#if NeedFunctionPrototypes
 static void LabelExtents(LabelStruct *_ls);
 static void PositionLabel(ShistogramWidget _w, LabelStruct *_ls);
 static void RedoYAxisLabels(ShistogramWidget _w);

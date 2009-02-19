@@ -75,7 +75,7 @@
 #define THETA 5.0 
 
 /* Actions */
-#if NeedFunctionProtoTypes
+#if NeedFunctionPrototypes
 tdatic void Increment(HdialWidget _w, XEvent *_event, String *_argv, int *_argc);
 static void Decrement(HdialWidget _w, XEvent *_event, String *_argv, int *_argc);
 static void Set(HdialWidget _w, XEvent *_event, String *argv, int *_argc);
@@ -88,7 +88,7 @@ static void Drag();
 #endif
 
 /* Widget Internals */ 
-#if NeedFunctionProtoTypes
+#if NeedFunctionPrototypes
 static void Initialize(HdialWidget _request, HdialWidget _new);
 static void Resize(HdialWidget _w);
 static void Destroy(HdialWidget _w);
@@ -103,7 +103,7 @@ static Boolean SetValues();
 #endif
 
 /* Misc */
-#if NeedFunctionProtoTypes
+#if NeedFunctionPrototypes
 static void MoveArm(HdialWidget _w);
 static void ReValue(HdialWidget _w);
 static void DrawArrow(HdialWidget _w, GC _gc);
