@@ -63,7 +63,7 @@ static Boolean setValues(CmapWidget _current, CmapWidget _request, CmapWidget _n
 static void borderHighlight(CmapWidget _cw);
 static void borderUnhighlight(CmapWidget _cw);
 #endif /* MOTIF */
-static void myXtWarning(char* _format, ...)
+static void myXtWarning(char* _format, ...);
 #else
 static void initialize();
 static void realize();
