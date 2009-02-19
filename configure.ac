@@ -204,7 +204,6 @@ AC_CONFIG_FILES([
     src/CircPerc/Makefile
     src/Cmap/Makefile
     src/Common/Makefile
-    src/converters/Makefile
     src/Dir/Makefile
     src/Enforcer/Makefile
     src/Entry/Makefile
@@ -227,7 +226,6 @@ AC_CONFIG_FILES([
     src/Label/Makefile
     src/Mdial/Makefile
     src/MenuBar/Makefile
-    src/misc/Makefile
     src/MultiList/Makefile
     src/OptButton/Makefile
     src/Pager/Makefile
@@ -240,7 +238,6 @@ AC_CONFIG_FILES([
     src/Rheostat/Makefile
     src/RowCol/Makefile
     src/Rows/Makefile
-    src/scroll/Makefile
     src/Scrollbar/Makefile
     src/ScrolledList/Makefile
     src/ScrollWin/Makefile
@@ -252,7 +249,6 @@ AC_CONFIG_FILES([
     src/SSGML/Makefile
     src/Stack/Makefile
     src/Tabs/Makefile
-    src/tabstring/Makefile
     src/TextMenu/Makefile
     src/TextOut/Makefile
     src/ThumbWheel/Makefile

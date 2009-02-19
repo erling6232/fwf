@@ -44,6 +44,7 @@ major=4
 # awk '{if (match($$0,/\.so\.[0-9]+$$/)) print substr($$0,RSTART+4)}'`
 
 configure:
+	mkdir -p m4
 	chmod +x build-aux/autogen.sh
 	build-aux/autogen.sh
 
@@ -75,6 +76,9 @@ endif
 build: build-stamp
 build-stamp:  configure-stamp
 	dh_testdir
+
+	mkdir -p include/Xfwf
+	cp src/*/*.h include/Xfwf
 
 	# Add here commands to compile the package.
 	$(MAKE)
