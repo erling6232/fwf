@@ -1,71 +1,21 @@
 SUBDIRS = \
-	Alert/ \
-	Animator/ \
-	AnsiTerm/ \
-	Array/ \
-	Arrow/ \
-	ArticleText/ \
 	Board/ \
 	Button/ \
-	Calendar/ \
-	Canvas/ \
-	CircPerc/ \
-	Cmap/ \
 	Common/ \
 	converters/ \
 	Dir/ \
-	Enforcer/ \
-	Entry/ \
-	FileChooser/ \
-	FileComp/ \
-	FileLister/ \
 	FileSelector/ \
-	FoldingTree/ \
 	Frame/ \
-	FText/ \
 	Group/ \
-	Hdial/ \
-	Histogram/ \
-	HScrollb/ \
-	HTML2/ \
-	Icon/ \
-	IconBox/ \
-	ImageSelector/ \
 	Label/ \
-	Mdial/ \
 	MenuBar/ \
 	MultiList/ \
 	OptButton/ \
-	Pager/ \
-	PcBar/ \
-	PieMenu/ \
-	PixelEditor/ \
 	Prompt/ \
 	PullDown/ \
-	RadioGroup/ \
-	Rheostat/ \
 	RowCol/ \
 	Rows/ \
-	Scrollbar/ \
 	ScrolledList/ \
-	ScrollWin/ \
-	ScrollWin3/ \
-	Shistogram/ \
-	Slider2/ \
-	Slider4/ \
-	SpinLabel/ \
-	SSGML/ \
-	Stack/ \
-	Tabs/ \
 	tabstring/ \
 	TextMenu/ \
-	TextOut/ \
-	ThumbWheel/ \
-	ThumbWheel2/ \
-	Toggle/ \
-	UserGraf/ \
-	VScrollb/ \
-	XmAnsiTerm/ \
-	XmIcon/ \
-	XmPager/ \
-	XmTabs/
+	Toggle/

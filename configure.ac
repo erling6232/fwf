@@ -117,146 +117,46 @@ AC_CONFIG_FILES([
     Makefile.def
     Makefile
     lib/Makefile
-    lib/Alert/Makefile
-    lib/Animator/Makefile
-    lib/AnsiTerm/Makefile
-    lib/Array/Makefile
-    lib/Arrow/Makefile
-    lib/ArticleText/Makefile
     lib/Board/Makefile
     lib/Button/Makefile
-    lib/Calendar/Makefile
-    lib/Canvas/Makefile
-    lib/CircPerc/Makefile
-    lib/Cmap/Makefile
     lib/Common/Makefile
     lib/converters/Makefile
     lib/Dir/Makefile
-    lib/Enforcer/Makefile
-    lib/Entry/Makefile
-    lib/FileChooser/Makefile
-    lib/FileComp/Makefile
-    lib/FileLister/Makefile
     lib/FileSelector/Makefile
-    lib/FoldingTree/Makefile
     lib/Frame/Makefile
-    lib/FText/Makefile
     lib/Group/Makefile
-    lib/Hdial/Makefile
-    lib/Histogram/Makefile
-    lib/HScrollb/Makefile
-    lib/HTML2/Makefile
-    lib/Icon/Makefile
-    lib/IconBox/Makefile
-    lib/ImageSelector/Makefile
     lib/Label/Makefile
-    lib/Mdial/Makefile
     lib/MenuBar/Makefile
     lib/misc/Makefile
     lib/MultiList/Makefile
     lib/OptButton/Makefile
-    lib/Pager/Makefile
-    lib/PcBar/Makefile
-    lib/PieMenu/Makefile
-    lib/PixelEditor/Makefile
     lib/Prompt/Makefile
     lib/PullDown/Makefile
-    lib/RadioGroup/Makefile
-    lib/Rheostat/Makefile
     lib/RowCol/Makefile
     lib/Rows/Makefile
     lib/scroll/Makefile
-    lib/Scrollbar/Makefile
     lib/ScrolledList/Makefile
-    lib/ScrollWin/Makefile
-    lib/ScrollWin3/Makefile
-    lib/Shistogram/Makefile
-    lib/Slider2/Makefile
-    lib/Slider4/Makefile
-    lib/SpinLabel/Makefile
-    lib/SSGML/Makefile
-    lib/Stack/Makefile
-    lib/Tabs/Makefile
     lib/tabstring/Makefile
     lib/TextMenu/Makefile
-    lib/TextOut/Makefile
-    lib/ThumbWheel/Makefile
-    lib/ThumbWheel2/Makefile
     lib/Toggle/Makefile
-    lib/UserGraf/Makefile
-    lib/VScrollb/Makefile
-    lib/XmAnsiTerm/Makefile
-    lib/XmIcon/Makefile
-    lib/XmPager/Makefile
-    lib/XmTabs/Makefile
     src/Makefile
-    src/Alert/Makefile
-    src/Animator/Makefile
-    src/AnsiTerm/Makefile
-    src/Array/Makefile
-    src/Arrow/Makefile
-    src/ArticleText/Makefile
     src/Board/Makefile
     src/Button/Makefile
-    src/Calendar/Makefile
-    src/Canvas/Makefile
-    src/CircPerc/Makefile
-    src/Cmap/Makefile
     src/Common/Makefile
     src/Dir/Makefile
-    src/Enforcer/Makefile
-    src/Entry/Makefile
-    src/FileChooser/Makefile
-    src/FileComp/Makefile
-    src/FileLister/Makefile
     src/FileSelector/Makefile
-    src/FoldingTree/Makefile
     src/Frame/Makefile
-    src/FText/Makefile
     src/Group/Makefile
-    src/Hdial/Makefile
-    src/Histogram/Makefile
-    src/HScrollb/Makefile
-    src/HTML2/Makefile
-    src/Icon/Makefile
-    src/IconBox/Makefile
-    src/ImageSelector/Makefile
     src/Label/Makefile
-    src/Mdial/Makefile
     src/MenuBar/Makefile
     src/MultiList/Makefile
     src/OptButton/Makefile
-    src/Pager/Makefile
-    src/PcBar/Makefile
-    src/PieMenu/Makefile
-    src/PixelEditor/Makefile
     src/Prompt/Makefile
     src/PullDown/Makefile
-    src/RadioGroup/Makefile
-    src/Rheostat/Makefile
     src/RowCol/Makefile
     src/Rows/Makefile
-    src/Scrollbar/Makefile
     src/ScrolledList/Makefile
-    src/ScrollWin/Makefile
-    src/ScrollWin3/Makefile
-    src/Shistogram/Makefile
-    src/Slider2/Makefile
-    src/Slider4/Makefile
-    src/SpinLabel/Makefile
-    src/SSGML/Makefile
-    src/Stack/Makefile
-    src/Tabs/Makefile
     src/TextMenu/Makefile
-    src/TextOut/Makefile
-    src/ThumbWheel/Makefile
-    src/ThumbWheel2/Makefile
     src/Toggle/Makefile
-    src/UserGraf/Makefile
-    src/VScrollb/Makefile
-    src/XmAnsiTerm/Makefile
-    src/XmIcon/Makefile
-    src/XmPager/Makefile
-    src/XmTabs/Makefile
     ])
 AC_OUTPUT
