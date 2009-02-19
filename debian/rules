@@ -78,7 +78,7 @@ build-stamp:  configure-stamp
 	dh_testdir
 
 	mkdir -p include/Xfwf
-	cp src/*/*.h include/Xfwf
+	cp lib/*/*.h include/Xfwf
 
 	# Add here commands to compile the package.
 	$(MAKE)
