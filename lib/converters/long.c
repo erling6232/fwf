@@ -9,6 +9,7 @@
 #include <X11/IntrinsicP.h>
 #include <X11/StringDefs.h>
 #include "Converters.h"
+#include <stdio.h>
 
 Boolean XfwfCvtLongToString(display, args, num_args, from, to, converter_data)
     Display *display;

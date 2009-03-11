@@ -176,9 +176,9 @@ int XfwfLocatePixmapFile (screen, colormap, visual, name,
     switch (i) {
     case 1:
       if (!(name[0] == '/'
-	    || name[0] == '.' && ( name[1] == '/'
+	    || (name[0] == '.' && ( name[1] == '/'
 				  || (name[1]=='.' && name[2]=='/')
-				  )))
+				  ))))
 	continue;
       fn = name;
       try_plain_name = False;
