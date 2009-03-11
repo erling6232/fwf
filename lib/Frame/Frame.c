@@ -440,7 +440,6 @@ static void initialize(request,self,args,num_args)Widget  request;Widget self;Ar
 #line 225 "Frame.w"
 {
     Dimension frame;
-    Position x, y;
 
     ((XfwfFrameWidget)self)->xfwfFrame.lightgc = NULL;
     ((XfwfFrameWidget)self)->xfwfFrame.darkgc = NULL;
@@ -838,6 +837,7 @@ Boolean  cvtFrameTypeToString(display,args,num_args,from,to,converter_data)Displ
     case XfwfLedged: done(String, "ledged");
     default: XtError("Illegal FrameType");
     }
+    return(FALSE);
 }
 #line 614 "Frame.w"
 /*ARGSUSED*/
@@ -889,4 +889,5 @@ Boolean  cvtShadowSchemeToString(display,args,num_args,from,to,converter_data)Di
     case XfwfStipple: done(String, "stipple");
     default: XtError("Illegal ShadowScheme");
     }
+    return(FALSE);
 }

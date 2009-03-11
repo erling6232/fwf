@@ -21,6 +21,7 @@
  */ 
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <X11/Xos.h>
 #include <X11/Xlib.h>
 #include <X11/StringDefs.h>
@@ -320,8 +321,7 @@ Widget request,new;
 	}
 	    else
 	{
-		getwd(path);
-		strcpy(str,path);
+		if (getcwd(path,MAXPATHLEN + 2)) strcpy(str,path);
 	}
 	FSCurrentDirectory(fsw) = str;
 

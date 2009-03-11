@@ -25,6 +25,7 @@
 
 #include <Xfwf/Directory.h>
 #include <Xfwf/RegExp.h>
+#include <unistd.h>
 
 /*--------------------------------------------------------------------------*
 
@@ -184,9 +185,9 @@ char *old_path,*new_path;
 	register char *p;
 	char path[MAXPATHLEN + 2];
 
-	if (getwd(path) == NULL) return(NULL);
+	if (getcwd(path,MAXPATHLEN + 2) == NULL) return(NULL);
 	if (chdir(old_path) != 0) return(NULL);
-	if (getwd(new_path) == NULL) strcpy(new_path,old_path);
+	if (getcwd(new_path,MAXPATHLEN + 2) == NULL) strcpy(new_path,old_path);
 	if (chdir(path) != 0) return(NULL);
 	for (p = new_path; *p != '\0'; p++);
 	if ((p != new_path) && *(p - 1) != '/')
@@ -208,6 +209,6 @@ void DirEntryDump(fp,de)
 FILE *fp;
 DirEntry *de;
 {
-	fprintf(fp,"%20s, Size %7d, Prot %3o\n",
+	fprintf(fp,"%20s, Size %7ld, Prot %3o\n",
 		DirEntryFileName(de),DirEntryFileSize(de),DirEntryProt(de));
 } /* End DirEntryDump */
