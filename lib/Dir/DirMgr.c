@@ -27,6 +27,7 @@
 #ifndef NO_REGEXP
 #include <Xfwf/RegExp.h>
 #endif
+#include <stdlib.h>
 
 #define	DIR_MGR_FSM_SIZE 1024
 
@@ -127,7 +128,7 @@ int free_data;
 	if (DirectoryOpen(path,DirectoryMgrDir(dm)) == FALSE)
 	{
 		fprintf(stderr,"DirectoryMgrOpen: can't open dir '%s'\n",
-			DirectoryMgrDir(dm));
+			DirectoryMgrDir(dm)->path);
 		free(dm);
 		if (free_data && f_data) free(f_data);
 		return(NULL);
@@ -166,6 +167,7 @@ int f_free;
 	DirectoryMgrFilterData(dm) = f_data;
 	DirectoryMgrFreeFilterData(dm) = f_free;
 	DirectoryMgrRefresh(dm);
+	return(TRUE);
 } /* End DirectoryMgrRefilter */
 
 
