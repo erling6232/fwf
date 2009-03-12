@@ -262,7 +262,6 @@ static void initialize(request,self,args,num_args)Widget  request;Widget self;Ar
 #endif
 #line 121 "Toggle.w"
 {
-    int status;
     Dimension w1, w2, w;
 
     ((XfwfToggleWidget)self)->xfwfToggle.on_gc = NULL;

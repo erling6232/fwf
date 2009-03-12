@@ -3,6 +3,7 @@
 */
 #include <X11/IntrinsicP.h>
 #include <X11/StringDefs.h>
+#include <stdlib.h>
 #line 657 "TextMenu.w"
 #include <X11/Xmu/CharSet.h>
 #line 658 "TextMenu.w"
@@ -294,7 +295,7 @@ static void parse_menu(self)Widget self;
 #endif
 #line 526 "TextMenu.w"
 {
-    Cardinal i, j, nlines = 0, p, q, n, ai, accellen = 0;
+    Cardinal i, j, nlines = 0, n, ai, accellen = 0;
     Bool is_line, accel, has_accel;
     char key, h[1024], accelerator[100], *all_accel = NULL;
     Position y = MARGIN;

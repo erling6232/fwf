@@ -1,6 +1,7 @@
 /*  Include files  */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <X11/Intrinsic.h>
 #include <X11/StringDefs.h>
 #include <Xfwf/Board.h>
@@ -32,7 +33,7 @@ static String fallback_resources[] = {
 static Widget toplevel, board, button1, button2, button3, button4;
 static XtAppContext app_context;
 
-static count1 = 0, count2 = 0;
+static int count1 = 0, count2 = 0;
 
 
 /* ARGSUSED */
@@ -92,7 +93,7 @@ static void quit(w, client_data, call_data)
 }
 
 
-void main(argc, argv)
+int main(argc, argv)
     int argc;
     String *argv;
 {
@@ -116,4 +117,5 @@ void main(argc, argv)
     XtAddCallback(button3, XtNleave, leave_quit, NULL);
     XtAddCallback(button4, XtNactivate, iconify, NULL);
     XtAppMainLoop(app_context);
+    return(0);
 }

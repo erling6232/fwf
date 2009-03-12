@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <X11/Intrinsic.h>
 #include <X11/StringDefs.h>
 #include <Xfwf/Board.h>
@@ -48,7 +49,7 @@ void quit(w, client_data, call_data)
     exit(0);
 }
 
-void main(argc, argv)
+int main(argc, argv)
     int argc;
     char *argv[];
 {
@@ -63,4 +64,5 @@ void main(argc, argv)
     XtAddCallback(expl, XtNcallback, quit, NULL);
     XtRealizeWidget(toplevel);
     XtAppMainLoop(app_context);
+    return(0);
 }

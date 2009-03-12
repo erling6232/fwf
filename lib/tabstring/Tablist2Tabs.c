@@ -1,5 +1,6 @@
 #include <X11/Intrinsic.h>
 #include <X11/StringDefs.h>
+#include <stdlib.h>
 #include "TabString.h"
 
 /*

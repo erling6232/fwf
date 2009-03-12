@@ -12,6 +12,7 @@
 #line 997 "Prompt.w"
 #include <X11/Xmu/Xmu.h>
 #include <Xfwf/PromptP.h>
+#include <Xfwf/TabString.h>
 #line 307 "Prompt.w"
 static void activate(
 #if NeedFunctionPrototypes
@@ -252,8 +253,7 @@ static Boolean  find_cursor(self,event,pos)Widget self;XButtonEvent * event;int 
 {
     XRectangle rect;
     int baseline, i, j;
-    Dimension w;
-    int x, y;
+    int y;
 
     if (! XtIsRealized(self)) return False;
     if (((XfwfPromptWidget)self)->xfwfLabel.label == NULL) return False;
@@ -398,12 +398,12 @@ static Boolean  matches(c,class)int  c;int  class;
 #endif
 #line 790 "Prompt.w"
 {
-    if (class == '9') return isdigit(c);
+    if (class == '9') return (Boolean) isdigit(c);
     if (class == 'a') return isalnum(c) || isspace(c);
     if (class == 'A') return isdigit(c) || isupper(c) || isspace(c);
     if (class == 'F')
 	return isgraph(c) && c != '*' && c != '?' && c != '[' && c != ']';
-    if (class == 'f') return isgraph(c);
+    if (class == 'f') return (Boolean) isgraph(c);
     if (class == 'X') return isascii(c);
     if (class == 'z') return isalnum(c);
     if (class == 'Z') return isdigit(c) || isupper(c);
@@ -552,7 +552,7 @@ static Boolean  convert_proc(self,selection,target,type,value,length,format)Widg
     	return True;
     }
     if (XmuConvertStandardSelection(self, req->time, selection, target,
-				    type, value, length, format))
+				    type, (XPointer *)value, length, format))
 	return True;
 
     return False;
@@ -732,7 +732,6 @@ static void start_select(self,event,params,num_params)Widget self;XEvent*event;S
 {
     Position x, y;
     Dimension w, h;
-    Cardinal pos;
 
     if (find_cursor(self, &event->xbutton, &((XfwfPromptWidget)self)->xfwfLabel.rvStart)) {
 	((XfwfPromptWidget)self)->xfwfLabel.rvLength = 0;
@@ -1097,7 +1096,6 @@ static void expose(self,event,region)Widget self;XEvent * event;Region  region;
 #endif
 #line 227 "Prompt.w"
 {
-    Region reg;
     XRectangle rect;
     int baseline, i, j;
     Dimension w;
