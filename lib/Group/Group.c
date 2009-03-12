@@ -9,6 +9,7 @@
 #include <stdio.h>
 #line 432 "Group.w"
 #include <X11/Xmu/Converters.h>
+#include <X11/Xmu/CharSet.h>
 #line 433 "Group.w"
 #include <Xfwf/Converters.h>
 #include <Xfwf/GroupP.h>
@@ -171,7 +172,7 @@ static void off_cb(toggle,client_data,call_data)Widget  toggle;XtPointer  client
 {
     Widget self = XtParent(toggle);
     Cardinal toggle_ord = (Cardinal) client_data;
-    Cardinal t, i, bits = sizeof(((XfwfGroupWidget)self)->xfwfGroup.selection) * 8;
+    Cardinal bits = sizeof(((XfwfGroupWidget)self)->xfwfGroup.selection) * 8;
 
     switch (((XfwfGroupWidget)self)->xfwfGroup.selectionStyle) {
     case XfwfOneSelection:

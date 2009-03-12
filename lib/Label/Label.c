@@ -375,7 +375,6 @@ static void initialize(request,self,args,num_args)Widget  request;Widget self;Ar
 #endif
 #line 270 "Label.w"
 {
-    char *s;
     Position x, y;
     Dimension w, h, wd, ht;
 
@@ -445,7 +444,6 @@ static void expose(self,event,region)Widget self;XEvent * event;Region  region;
     XRectangle rect;
     int baseline;
     int w1, w2, w3, w4, w5;
-    char *s, *t;
     int x, y, i, j, rstart, rend, hstart, hend;
 
     if (! XtIsRealized(self)) return;
