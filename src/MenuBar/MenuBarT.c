@@ -1,6 +1,7 @@
 /* MenuBarT -- test program for the MenuBar widget */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <X11/Intrinsic.h>
 #include <X11/StringDefs.h>
 #include <Xfwf/Board.h>
@@ -234,4 +235,5 @@ int main(argc, argv)
     XtInstallAllAccelerators(menu6, toplevel);
 #endif
     XtAppMainLoop(app_context);
+    return(0);
 }

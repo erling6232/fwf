@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <X11/Intrinsic.h>
 #include <X11/StringDefs.h>
 #include <Xfwf/Label.h>
@@ -75,12 +76,10 @@ static void quit(widget, client_data, call_data)
 }
 
 
-void main(argc, argv)
+int main(argc, argv)
     int argc;
     char *argv[];
 {
-    XCC xcc;
-
     toplevel = XtVaAppInitialize(&app_context, "LabelT", NULL, 0,
 				  &argc, argv, fallback_resources, NULL);
     tester = XtVaCreateManagedWidget("tester", xfwfLabelWidgetClass,
@@ -97,4 +96,5 @@ void main(argc, argv)
     XtAddCallback(qbtn, XtNcallback, quit, NULL);
     XtRealizeWidget(toplevel);
     XtAppMainLoop(app_context);
+    return(0);
 }

@@ -35,7 +35,9 @@ typedef struct _XfwfFileSelectorRec      *XfwfFileSelectorWidget;
 #define	XtNtitle			"title"
 #endif
 
+#ifndef XtNcurrentDirectory
 #define	XtNcurrentDirectory		"currentDirectory"
+#endif
 #define	XtNcurrentFile			"currentFile"
 #define	XtNsortMode			"sortMode"
 #define	XtNpattern			"pattern"

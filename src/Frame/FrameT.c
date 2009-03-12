@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <X11/Intrinsic.h>
 #include <X11/StringDefs.h>
 #include <X11/Xaw/Command.h>
@@ -129,7 +130,7 @@ static void quit(widget, client_data, call_data)
 }
 
 
-void main(argc, argv)
+int main(argc, argv)
     int argc;
     char *argv[];
 {
@@ -175,4 +176,5 @@ void main(argc, argv)
 
     XtRealizeWidget(toplevel);
     XtAppMainLoop(app_context);
+    return(0);
 }

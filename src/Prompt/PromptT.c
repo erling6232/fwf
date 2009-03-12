@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <X11/Intrinsic.h>
 #include <X11/StringDefs.h>
 #include <Xfwf/Prompt.h>
@@ -50,7 +51,7 @@ static void quit(w, client_data, call_data)
 }
 
 
-void main(argc, argv)
+int main(argc, argv)
     int argc;
     char *argv[];
 {
@@ -71,4 +72,5 @@ void main(argc, argv)
     XtRealizeWidget(toplevel);
     XSync(XtDisplay(toplevel), False);
     XtAppMainLoop(app_context);
+    return(0);
 }

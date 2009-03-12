@@ -1,6 +1,7 @@
 /* PullDownT -- test program for PullDown widget */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <X11/Intrinsic.h>
 #include <X11/StringDefs.h>
 #include <Xfwf/Board.h>
@@ -88,4 +89,5 @@ int main(argc, argv)
     XtAddCallback(menu2, XtNactivate, activate2, NULL);
     XtRealizeWidget(toplevel);
     XtAppMainLoop(app_context);
+    return(0);
 }

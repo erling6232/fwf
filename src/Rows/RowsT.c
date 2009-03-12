@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <X11/Intrinsic.h>
 #include <X11/StringDefs.h>
 #include <Xfwf/Rows.h>
@@ -7,7 +8,7 @@
 #define MAX 20
 
 static XtAppContext app_context;
-static Widget toplevel, tester, sub[MAX], quit_button, rowcol_button;
+static Widget toplevel, tester, sub[MAX], quit_button;
 Boolean byRow = True;
 
 static String fallback[] = {
@@ -47,7 +48,7 @@ static void quit(w, client_data, call_data)
  * different sizes and give each a label equal to its sequence number
  * 0 to MAX - 1.
  */
-void main(argc, argv)
+int main(argc, argv)
     int argc;
     char *argv[];
 {
@@ -80,4 +81,5 @@ void main(argc, argv)
     XtAddCallback(quit_button, XtNactivate, quit, NULL);
     XtRealizeWidget(toplevel);
     XtAppMainLoop(app_context);
+    return(0);
 }

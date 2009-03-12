@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <X11/Intrinsic.h>
 #include <X11/StringDefs.h>
 #include <Xfwf/RowCol.h>
@@ -82,7 +83,7 @@ static void rowcol(w, client_data, call_data)
  * different sizes and give each a label equal to its sequence number
  * 0 to MAX - 1.
  */
-void main(argc, argv)
+int main(argc, argv)
     int argc;
     char *argv[];
 {
@@ -125,4 +126,5 @@ void main(argc, argv)
     XtAddCallback(quit_button, XtNactivate, quit, NULL);
     XtRealizeWidget(toplevel);
     XtAppMainLoop(app_context);
+    return(0);
 }
