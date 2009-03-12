@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <Xfwf/Directory.h>
 
 /*
@@ -24,11 +25,10 @@ static char* usage[] =
 };
 
 
-FatalError(prog)
+int FatalError(prog)
 char *prog;
 {
 	int i;
-	char *s;
 
 	for (i = 0; usage[i] != NULL; i++)
 	{
@@ -57,7 +57,7 @@ char **argv;
 	       DirectoryPath(&directory));
 	while (DirectoryReadNextEntry(&directory,&entry))
 	{
-		printf("<Type %5d,  File '%20s',  Mode %3d,  Size %d>\n",
+		printf("<Type %5d,  File '%20s',  Mode %3d,  Size %ld>\n",
 		       DirEntryType(&entry),
 		       DirEntryFileName(&entry),
 		       DirEntryProt(&entry),
