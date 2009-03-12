@@ -11,6 +11,7 @@
  */ 
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <Xfwf/DirMgr.h>
 
 static char* usage[] =
@@ -31,7 +32,7 @@ char **argv;
 {
 	DIRECTORY_MGR *dm;
 	DIR_ENTRY *de;
-	char *path,*pat,*s;
+	char *path,*pat;
 	int i,sort_mode;
 
 	if (argc != 3 && argc != 4)

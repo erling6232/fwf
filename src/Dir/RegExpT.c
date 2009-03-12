@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <Xfwf/RegExp.h>
 
 /*
@@ -31,11 +32,10 @@ static char* usage[] =
 };
 
 
-FatalError(prog)
+int FatalError(prog)
 char *prog;
 {
 	int i;
-	char *s;
 
 	for (i = 0; usage[i] != NULL; i++)
 	{
