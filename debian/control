@@ -5,6 +5,14 @@ Build-Depends: debhelper (>= 5), autotools-dev, autoconf, automake, libtool, \
 	libxaw7-dev
 Standards-Version: 3.7.2
 
+Package: fwf-test
+Section: science
+Architecture: any
+Depends: libfwf (= ${Source-Version})
+Description: Test programs for Xfwf widgets
+ This package contains the test programs provided by the
+ Xfwf Free Widget Foundation widgets.
+
 Package: libfwf
 Section: libs
 Architecture: any
