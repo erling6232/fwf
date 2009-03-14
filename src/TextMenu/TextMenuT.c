@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <X11/Intrinsic.h>
 #include <X11/StringDefs.h>
 #include <Xfwf/TextMenu.h>
@@ -144,7 +145,7 @@ static char trans5[] = "<BtnDown>: place_menu(menu5) XtMenuPopup(menu5)";
 static XtActionsRec actions[] = {{"place_menu", place_menu}};
 
 
-void main(argc, argv)
+int main(argc, argv)
     int argc;
     String *argv;
 {
@@ -203,4 +204,5 @@ void main(argc, argv)
 
     XtRealizeWidget(toplevel);
     XtAppMainLoop(app_context);
+    return(0);
 }

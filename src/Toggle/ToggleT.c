@@ -1,6 +1,7 @@
 /*  Include files  */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <X11/Intrinsic.h>
 #include <X11/StringDefs.h>
 #include <Xfwf/Board.h>
@@ -72,7 +73,7 @@ static void quit(w, client_data, call_data)
 /*
  *  Main program
  */
-void main(argc, argv)
+int main(argc, argv)
     int argc;
     String *argv;
 {
@@ -94,4 +95,5 @@ void main(argc, argv)
     XtAddCallback(button2, XtNonCallback, on, NULL);
     XtAddCallback(quitbutton, XtNactivate, quit, NULL);
     XtAppMainLoop(app_context);
+    return(0);
 }
