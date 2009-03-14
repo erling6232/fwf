@@ -32,10 +32,6 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 
-#if defined(SYSV) || defined(SVR4)
-#define getwd(path) getcwd(path, MAXPATHLEN)
-#endif
-
 #ifndef	NO_DIRENT
 #include <dirent.h>
 #else
