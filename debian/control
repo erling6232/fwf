@@ -24,7 +24,7 @@ Description: Shared libraries for Xfwf widgets
 Package: libfwf-dev
 Section: devel
 Architecture: any
-Depends: libfwf (= ${Source-Version}), libx11-dev, libxite-dev (= ${Source-Version})
+Depends: libfwf (= ${Source-Version}), libx11-dev
 Description: Development libraries and header files for Xfwf widgets
  This development package contains the static libraries and header files for the
  Xfwf Free Widget Foundation widgets.
