@@ -32,11 +32,21 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 
-#ifndef	NO_DIRENT
-#include <dirent.h>
+#ifdef HAVE_DIRENT_H
+# include <dirent.h>
+# define NAMLEN(dirent) strlen ((dirent)->d_name)
 #else
-#include <sys/dir.h>
-#define	dirent direct
+# define dirent direct
+# define NAMLEN(dirent) ((dirent)->d_namlen)
+# ifdef HAVE_SYS_NDIR_H
+#  include <sys/ndir.h>
+# endif
+# ifdef HAVE_SYS_DIR_H
+#  include <sys/dir.h>
+# endif
+# ifdef HAVE_NDIR_H
+#  include <ndir.h>
+# endif
 #endif
 
 #ifndef _SYS_NAME_MAX
