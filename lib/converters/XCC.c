@@ -323,7 +323,6 @@ XCC _xcc;
 {
 	XColor *clrs, *cstart;
 	register int red, green, blue;
-	double dinc;
 	int cubeval;
 	int count;
 

@@ -57,7 +57,7 @@ void choose_xcc_color(self, xcc, factor, base, result)
     Colormap colormap;
     XColor color;
     double invfactor = 1.0/(double) factor;
-    double maxval = 65535.0, h = 1.0/maxval;
+    double maxval = 65535.0;
     int v;
 
     /* Find RGB values of `base' */
