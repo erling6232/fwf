@@ -1,2 +1,3 @@
 debian/tmp/usr/include/*.h
 debian/tmp/usr/lib/libfwf.*a
+debian/tmp/usr/share/man/man3/*
