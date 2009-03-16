@@ -106,7 +106,7 @@ AC_CHECK_FUNCS([clock flock mktemp mkstemp tempnam time times])
 # define XITE_STRING_H     <string.h>
 # define XITE_PARAM_H      <sys/param.h>
 
-[AC_DEFINE([NeedFunctionPrototypes], [1], [Force usage of function prototypes])]
+AC_DEFINE([NeedFunctionPrototypes], [1], [Force usage of function prototypes])
 
 # Common Makefile.def
 AC_SUBST(configdir, [\${top_builddir}])
