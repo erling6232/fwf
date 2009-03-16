@@ -26,12 +26,12 @@
 #  include <config.h>
 #endif
 
-#include <Xfwf/DirMgr.h>
 
 #ifndef NO_REGEXP
 #include <Xfwf/RegExp.h>
 #endif
 #include <stdlib.h>
+#include <Xfwf/DirMgr.h>
 
 #define	DIR_MGR_FSM_SIZE 1024
 
@@ -48,7 +48,7 @@ char *pattern;
 {
 	DirectoryMgr *dm;
 	PFI f_func,s_func;
-	char *f_data;
+	regex_obj *f_data;
 
 	if (pattern == NULL) pattern = "*";
 	if (!DirectoryMgrSimpleFilterFunc(pattern,&f_func,&f_data))
@@ -70,7 +70,7 @@ DirectoryMgr *dm;
 char *pattern;
 {
 	PFI f_func;
-	char *f_data;
+	regex_obj *f_data;
 
 	if (!DirectoryMgrSimpleFilterFunc(pattern,&f_func,&f_data))
 	{
@@ -117,7 +117,7 @@ char *path;
 DirectoryMgr *DirectoryMgrOpen(path,c_func,f_func,f_data,free_data)
 char *path;
 PFI c_func,f_func;
-char *f_data;
+regex_obj *f_data;
 int free_data;
 {
 	DirectoryMgr *dm;
@@ -160,7 +160,7 @@ DirectoryMgr *dm;
 int DirectoryMgrRefilter(dm,f_func,f_data,f_free)
 DirectoryMgr *dm;
 PFI f_func;
-char *f_data;
+regex_obj *f_data;
 int f_free;
 {
 	if (DirectoryMgrFilterData(dm) && DirectoryMgrFreeFilterData(dm))

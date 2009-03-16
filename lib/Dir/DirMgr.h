@@ -101,7 +101,7 @@ typedef struct
 	size_t total_count;
 	size_t filtered_count;
 	PFI filter_func;
-	char *filter_data;
+	regex_obj *filter_data;
 	int free_filter_data;
 	PFI comp_func;
 	size_t current_index;
@@ -170,10 +170,10 @@ int		DirectoryMgrSimpleResort(DirectoryMgr *dm, int sort_type);
 
 int		DirectoryMgrCanOpen(char *path);
 DirectoryMgr *	DirectoryMgrOpen(char *path, PFI c_func, PFI f_func,
-			char *f_data, int free_data);
+			regex_obj *f_data, int free_data);
 void		DirectoryMgrClose(DirectoryMgr *dm);
 int		DirectoryMgrRefilter(DirectoryMgr *dm, PFI f_func,
-			char *f_data, int f_free);
+			regex_obj *f_data, int f_free);
 int		DirectoryMgrRefresh(DirectoryMgr *dm);
 void		DirectoryMgrResort(DirectoryMgr *dm, PFI c_func);
 
@@ -184,8 +184,7 @@ DirEntry *	DirectoryMgrCurrentEntry(DirectoryMgr *dm);
 DirEntry *	DirectoryMgrNextEntry(DirectoryMgr *dm);
 DirEntry *	DirectoryMgrPrevEntry(DirectoryMgr *dm);
 
-int             DirectoryMgrSimpleFilterFunc(char *pattern, PFI *ff_ptr,
-                        regex_obj **fd_ptr);
+int             DirectoryMgrSimpleFilterFunc(char *pattern, PFI *ff_ptr, regex_obj **fd_ptr);
 int		DirectoryMgrSimpleSortingFunc(int sort_type, PFI *sf_ptr);
 
 int		DirectoryMgrCompareName(DirEntry **e1p, DirEntry **e2p);
