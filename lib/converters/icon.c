@@ -269,7 +269,7 @@ Boolean cvtStringToIcon(dpy, args, num_args, from, to, converter_data)
 {
     static XpmColorSymbol table[MAXCOLORSYM];
     Cardinal n;
-    String *data, s = (String) from->addr;
+    String s = (String) from->addr;
     Widget self = (Widget) args[0].addr;
     Colormap* cmap = (Colormap*) args[1].addr;
     XCC *xcc = (XCC*) args[2].addr;
