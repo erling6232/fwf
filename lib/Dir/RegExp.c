@@ -27,6 +27,7 @@
 #endif
 
 #include <Xfwf/RegExp.h>
+#include <stdlib.h>
 
 void RegExpCompile(const char *regexp, regex_obj *fsm_ptr, int fsm_length)
 {

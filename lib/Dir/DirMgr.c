@@ -183,7 +183,7 @@ DirectoryMgr *dm;
 	DirEntryCons *head,*tail,*cons;
 	DirEntry *dm_data,**dm_ptrs;
 	PFI f_func;
-	char *f_data;
+	regex_obj *f_data;
 
 	DirectoryMgrTotalCount(dm) = 0;
 	DirectoryMgrFilteredCount(dm) = 0;
@@ -485,7 +485,7 @@ DirEntry **e1p,**e2p;
 int DirectoryMgrFilterName(DirEntry *de, regex_obj *fsm)
 {
 #ifndef	NO_REGEXP
-	fprintf(stderr,"DirectoryMgrFilterName: compare \"%s\" to \"%s\": %d\n", DirEntryFileName(de),fsm, RegExpMatch(DirEntryFileName(de),fsm));
+	fprintf(stderr,"DirectoryMgrFilterName: compare \"%s\": %d\n", DirEntryFileName(de), RegExpMatch(DirEntryFileName(de),fsm));
 	return(RegExpMatch(DirEntryFileName(de),fsm));
 #else
 	return(TRUE);

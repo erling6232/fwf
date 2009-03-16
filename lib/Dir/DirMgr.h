@@ -25,6 +25,7 @@
 #ifndef _FWF_DIRECTORY_MGR_H_
 #define	_FWF_DIRECTORY_MGR_H_
 
+#include <Xfwf/RegExp.h>
 #include <Xfwf/Directory.h>
 
 /*---------------------------------------------------------------------------*
