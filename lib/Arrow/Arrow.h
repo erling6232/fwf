@@ -3,6 +3,7 @@
 */
 #ifndef _XfwfArrow_H_
 #define _XfwfArrow_H_
+
 #include <Xfwf/Board.h>
 _XFUNCPROTOBEGIN
 #ifndef XtNdirection

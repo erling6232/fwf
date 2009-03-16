@@ -3,6 +3,7 @@
 */
 #ifndef _XfwfIcon_H_
 #define _XfwfIcon_H_
+
 #include <Xfwf/Board.h>
 _XFUNCPROTOBEGIN
 #include <Xfwf/Converters.h>

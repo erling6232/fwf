@@ -3,6 +3,7 @@
 */
 #ifndef _XfwfButton_H_
 #define _XfwfButton_H_
+
 #include <Xfwf/Label.h>
 _XFUNCPROTOBEGIN
 #ifndef XtNactivate

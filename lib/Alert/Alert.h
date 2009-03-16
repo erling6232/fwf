@@ -3,6 +3,7 @@
 */
 #ifndef _XfwfAlert_H_
 #define _XfwfAlert_H_
+
 #include <X11/Shell.h>
 _XFUNCPROTOBEGIN
 #define max(a, b) ((a )>(b )?(a ):(b ))

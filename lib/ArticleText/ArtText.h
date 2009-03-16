@@ -3,6 +3,7 @@
 */
 #ifndef _XfwfArticleText_H_
 #define _XfwfArticleText_H_
+
 #include <Xfwf/TextOut.h>
 _XFUNCPROTOBEGIN
 void XfwfSetArticleText(

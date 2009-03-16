@@ -3,6 +3,7 @@
 */
 #ifndef _XfwfFrame_H_
 #define _XfwfFrame_H_
+
 #include <Xfwf/Common.h>
 _XFUNCPROTOBEGIN
 typedef enum {

@@ -3,6 +3,7 @@
 */
 #ifndef _XfwfAnsiTerm_H_
 #define _XfwfAnsiTerm_H_
+
 #include <Xfwf/Board.h>
 _XFUNCPROTOBEGIN
 void  XfwfAnsiWrite(

@@ -3,6 +3,7 @@
 */
 #ifndef _XfwfGroup_H_
 #define _XfwfGroup_H_
+
 #include <Xfwf/RowCol.h>
 _XFUNCPROTOBEGIN
 typedef enum {

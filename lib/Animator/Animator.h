@@ -3,6 +3,7 @@
 */
 #ifndef _XfwfAnimator_H_
 #define _XfwfAnimator_H_
+
 #include <Xfwf/Board.h>
 _XFUNCPROTOBEGIN
 void XfwfStartAnimation(

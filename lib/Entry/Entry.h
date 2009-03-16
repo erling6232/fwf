@@ -3,6 +3,7 @@
 */
 #ifndef _XfwfEntry_H_
 #define _XfwfEntry_H_
+
 #include <Xfwf/Board.h>
 _XFUNCPROTOBEGIN
 void  XfwfEntryClear(

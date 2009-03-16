@@ -3,6 +3,7 @@
 */
 #ifndef _XfwfEnforcer_H_
 #define _XfwfEnforcer_H_
+
 #include <Xfwf/Board.h>
 _XFUNCPROTOBEGIN
 typedef struct _XfwfEnforcerClassRec *XfwfEnforcerWidgetClass;

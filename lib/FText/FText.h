@@ -3,6 +3,7 @@
 */
 #ifndef _XfwfFormattedText_H_
 #define _XfwfFormattedText_H_
+
 _XFUNCPROTOBEGIN
 #define XfwfActivate 1 
 

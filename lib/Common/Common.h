@@ -3,6 +3,7 @@
 */
 #ifndef _XfwfCommon_H_
 #define _XfwfCommon_H_
+
 #include <X11/Composite.h>
 _XFUNCPROTOBEGIN
 typedef int  Alignment;

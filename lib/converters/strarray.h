@@ -35,7 +35,6 @@
 
 */
 
-
 typedef String * StringArray;
 
 Boolean cvtStringToStringArray(

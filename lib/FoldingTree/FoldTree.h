@@ -3,6 +3,7 @@
 */
 #ifndef _XfwfFoldingTree_H_
 #define _XfwfFoldingTree_H_
+
 #include <Xfwf/Board.h>
 _XFUNCPROTOBEGIN
 #ifndef XtNexpanded

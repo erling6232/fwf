@@ -3,6 +3,7 @@
 */
 #ifndef _XfwfBoard_H_
 #define _XfwfBoard_H_
+
 #include <Xfwf/Frame.h>
 _XFUNCPROTOBEGIN
 #ifndef XtNabs_x

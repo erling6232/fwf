@@ -3,6 +3,7 @@
 */
 #ifndef _XfwfHTML2_H_
 #define _XfwfHTML2_H_
+
 #include <Xfwf/SSGML.h>
 _XFUNCPROTOBEGIN
 typedef struct {
