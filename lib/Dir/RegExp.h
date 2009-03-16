@@ -27,6 +27,16 @@
 
 #include <stdio.h>
 
+#ifdef HAVE_REGEX_H
+#  include <regex.h>
+   typedef regex_t regex_obj;
+#elif HAVE_REGEXP_H
+#  include <regexp.h>
+   typedef char    regex_obj;
+#else
+   typedef char    regex_obj;
+#endif
+
 #if (!NeedFunctionPrototypes)
 
 void	RegExpCompile();
@@ -36,8 +46,8 @@ void	RegExpPatternToRegExp();
 
 #else
 
-void	RegExpCompile(char *regexp, char *fsm_ptr, int fsm_length);
-int	RegExpMatch(char *string, char *fsm_ptr);
+void    RegExpCompile(const char *regexp, regex_obj *fsm_ptr, int fsm_length);
+int     RegExpMatch(const char *string, const regex_obj *fsm_ptr);
 void	_RegExpError(int val);
 void	RegExpPatternToRegExp(char *pattern, char *reg_exp);
 
@@ -51,11 +61,13 @@ void	RegExpPatternToRegExp(char *pattern, char *reg_exp);
 #define	FALSE				0
 #endif
 
+#if HAVE_REGEXP_H
 #define	INIT		register char *sp = instring;
 #define	GETC()		(*sp++)
 #define	PEEKC()		(*sp)
-#define	UNGETC(c)	-- sp
+#define	UNGETC(c)	(-- sp)
 #define	RETURN(ptr)	return;
 #define	ERROR(val)	_RegExpError(val)
+#endif
 
 #endif

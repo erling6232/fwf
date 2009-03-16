@@ -179,6 +179,8 @@ DirEntry *de;
 	FileInfoLastModify(DirEntryActualInfo(de)) = _stats.st_mtime;
 	FileInfoLastStatusChange(DirEntryActualInfo(de)) = _stats.st_ctime;
 
+	fprintf(stderr, "DirectoryReadNextEntry opened \"%s\"\n", full_path);
+
 	return(TRUE);
 } /* End DirectoryReadNextEntry */
 

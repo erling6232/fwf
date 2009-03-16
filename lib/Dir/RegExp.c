@@ -27,20 +27,30 @@
 #endif
 
 #include <Xfwf/RegExp.h>
-#include <regexp.h>
 
-void RegExpCompile(regexp,fsm_ptr,fsm_length)
-char *regexp,*fsm_ptr;
-int fsm_length;
+void RegExpCompile(const char *regexp, regex_obj *fsm_ptr, int fsm_length)
 {
+#ifdef HAVE_REGEX_H
+	int cflags = 0;
+	(void) regcomp(fsm_ptr, regexp, cflags);
+#else
 #ifndef NO_REGEXP
 	compile(regexp,fsm_ptr,&(fsm_ptr[fsm_length]),'\0');
+#endif
 #endif
 } /* End RegExpCompile */
 
 
-int RegExpMatch(string,fsm_ptr)
-char *string,*fsm_ptr;
+#ifdef HAVE_REGEX_H
+int RegExpMatch(const char *string, const regex_t *fsm_ptr)
+{
+	if (regexec(fsm_ptr, string, (size_t) 0, NULL, 0) == 0)
+		return(TRUE);
+	else
+		return(FALSE);
+}
+#else
+int RegExpMatch(const char *string, const char *fsm_ptr)
 {
 #ifndef NO_REGEXP
 	if (advance(string,fsm_ptr) != 0)
@@ -50,7 +60,9 @@ char *string,*fsm_ptr;
 #else
 	return(TRUE);
 #endif
-} /* End RegExpMatch */
+}
+#endif
+/* End RegExpMatch */
 
 
 void _RegExpError(val)

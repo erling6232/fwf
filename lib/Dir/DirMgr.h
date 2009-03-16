@@ -184,8 +184,8 @@ DirEntry *	DirectoryMgrCurrentEntry(DirectoryMgr *dm);
 DirEntry *	DirectoryMgrNextEntry(DirectoryMgr *dm);
 DirEntry *	DirectoryMgrPrevEntry(DirectoryMgr *dm);
 
-int		DirectoryMgrSimpleFilterFunc(char *pattern, PFI *ff_ptr,
-			char **fd_ptr);
+int             DirectoryMgrSimpleFilterFunc(char *pattern, PFI *ff_ptr,
+                        regex_obj **fd_ptr);
 int		DirectoryMgrSimpleSortingFunc(int sort_type, PFI *sf_ptr);
 
 int		DirectoryMgrCompareName(DirEntry **e1p, DirEntry **e2p);
@@ -200,7 +200,7 @@ int		DirectoryMgrCompareLastAccessAscending(DirEntry **e1p,
 int		DirectoryMgrCompareLastAccessDescending(DirEntry **e1p,
 			DirEntry **e2p);
 
-int		DirectoryMgrFilterName(DirEntry *de, char *fsm);
+int             DirectoryMgrFilterName(DirEntry *de, regex_obj *fsm);
 
 #endif
 

@@ -209,10 +209,12 @@ DirectoryMgr *dm;
 			free(cons);
 			break;
 		}
+		fprintf(stderr,"DirectoryMgrRefresh: DirectoryReadNextEntry \"%s\": %d\n", cons->dir_entry.filename, f_func(&(cons->dir_entry),f_data));
 		++ DirectoryMgrTotalCount(dm);
 		if ((f_func == NULL) ||
 		    (f_func && f_func(&(cons->dir_entry),f_data)))
 		{
+			fprintf(stderr,"DirectoryMgrRefresh: Added entry\n");
 			cons->next = NULL;
 			if (head == NULL)
 				head = cons;
@@ -223,6 +225,7 @@ DirectoryMgr *dm;
 		}
 		    else			/* Filter Failed */
 		{
+			fprintf(stderr,"DirectoryMgrRefresh: Failed entry\n");
 			free(cons);
 		}
 	}
@@ -356,19 +359,19 @@ DirectoryMgr *dm;
 
  *---------------------------------------------------------------------------*/
 
-int DirectoryMgrSimpleFilterFunc(pattern,ff_ptr,fd_ptr)
-char *pattern;
-PFI *ff_ptr;
-char **fd_ptr;
+int DirectoryMgrSimpleFilterFunc(char *pattern, PFI *ff_ptr, regex_obj **fd_ptr)
 {
 #ifndef	NO_REGEXP
 	char regexp[2048];
 
 	*ff_ptr = DirectoryMgrFilterName;
+#ifdef HAVE_REGEXP_H
 	*fd_ptr = (char *)malloc(sizeof(char) * DIR_MGR_FSM_SIZE);
 	if (*fd_ptr == NULL) return(FALSE);
+#endif
 	RegExpPatternToRegExp(pattern,regexp);
 	RegExpCompile(regexp,*fd_ptr,DIR_MGR_FSM_SIZE);
+	fprintf(stderr,"DirectoryMgrSimpleFilterFunc: pattern \"%s\"\n regexp \"%s\"\n", pattern, regexp);
 #endif
 	return(TRUE);
 } /* End DirectoryMgrSimpleFilterFunc */
@@ -479,11 +482,10 @@ DirEntry **e1p,**e2p;
 
  *---------------------------------------------------------------------------*/
 
-int DirectoryMgrFilterName(de,fsm)
-DirEntry *de;
-char *fsm;
+int DirectoryMgrFilterName(DirEntry *de, regex_obj *fsm)
 {
 #ifndef	NO_REGEXP
+	fprintf(stderr,"DirectoryMgrFilterName: compare \"%s\" to \"%s\": %d\n", DirEntryFileName(de),fsm, RegExpMatch(DirEntryFileName(de),fsm));
 	return(RegExpMatch(DirEntryFileName(de),fsm));
 #else
 	return(TRUE);
