@@ -1,3 +1,7 @@
+#if HAVE_CONFIG_H
+#  include <config.h>
+#endif
+
 #ifndef _HPUX_SOURCE
 #define _HPUX_SOURCE
 #endif

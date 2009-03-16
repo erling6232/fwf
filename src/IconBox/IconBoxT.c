@@ -4,6 +4,10 @@
  * 13 May 1993: replaced strerror() with sys_errlist[]
  */
 
+#if HAVE_CONFIG_H
+#  include <config.h>
+#endif
+
 #include <stdio.h>
 #include <dirent.h>
 #include <unistd.h>

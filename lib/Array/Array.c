@@ -20,11 +20,17 @@
 
 /*
  * $Log$
+ * Revision 1.1  2009-02-17 13:09:51  eran
+ * Moved here from ../src
+ *
  * Revision 1.1.1.1  2009-02-09 09:30:24  eran
  * Import of FWF v. 4.0
  *
  */
 
+#if HAVE_CONFIG_H
+#  include <config.h>
+#endif
 
 #include <X11/IntrinsicP.h>
 #include <X11/RectObjP.h>

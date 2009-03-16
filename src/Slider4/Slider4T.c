@@ -2,6 +2,10 @@
  * Bert Bos <bert@let.rug.nl>
  */
 
+#if HAVE_CONFIG_H
+#  include <config.h>
+#endif
+
 #include <stdio.h>
 #include <X11/Intrinsic.h>
 #include <X11/StringDefs.h>

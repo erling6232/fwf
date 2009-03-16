@@ -20,6 +20,10 @@
  * (Sep 5, 1995: bugfix by Bert Bos <bert@let.rug.nl>, search for [BB])
  */ 
 
+#if HAVE_CONFIG_H
+#  include <config.h>
+#endif
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <X11/Xos.h>

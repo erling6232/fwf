@@ -26,6 +26,10 @@
  * 	
  */ 
 
+#if HAVE_CONFIG_H
+#  include <config.h>
+#endif
+
 #include <Xfwf/PixEditT.h>
 
 Globals G;

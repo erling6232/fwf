@@ -23,6 +23,10 @@
  |  Bert Bos <bert@let.rug.nl> (31 Oct 1994)
  +--------------------------------------------------------------------*/
 
+#if HAVE_CONFIG_H
+#  include <config.h>
+#endif
+
 #define USE_PTY
 
 #include <stdio.h>

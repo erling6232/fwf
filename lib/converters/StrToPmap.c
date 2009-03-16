@@ -1,3 +1,7 @@
+#if HAVE_CONFIG_H
+#  include <config.h>
+#endif
+
 #ifndef lint
 static char rcsid[] = "$ StrToPmap.c <thoth>, what a hack $";
 #endif /* lint */

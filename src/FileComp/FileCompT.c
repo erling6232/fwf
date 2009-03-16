@@ -22,6 +22,9 @@ static char rcsid[] = "$Id$";
 
 /*
  * $Log$
+ * Revision 1.1.1.1  2009-02-09 09:30:23  eran
+ * Import of FWF v. 4.0
+ *
  * Revision 0.19  1993/03/11  10:53:00  thoth
  * Fix some pointer type mismatches.
  *
@@ -48,6 +51,10 @@ static char rcsid[] = "$Id$";
  * adding rcsid[]
  * 
  */
+
+#if HAVE_CONFIG_H
+#  include <config.h>
+#endif
 
 #include <stdio.h>
 #include <string.h>

@@ -6,6 +6,9 @@ returns |True|. If the chosen color ends up being the same as the
 original, the color gray75 is returned instead.
 */
 
+#if HAVE_CONFIG_H
+#  include <config.h>
+#endif
 #include <stdio.h>
 #include <assert.h>
 #include <X11/IntrinsicP.h>

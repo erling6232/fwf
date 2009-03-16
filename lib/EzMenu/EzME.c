@@ -1,3 +1,7 @@
+#if HAVE_CONFIG_H
+#  include <config.h>
+#endif
+
 #if ( !defined(lint) && !defined(SABER) )
 static char Xrcsid[] = "$XConsortium: EzME.c,v 1.6 89/12/11 15:20:07 kit Exp $";
 #endif 

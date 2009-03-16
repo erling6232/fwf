@@ -22,6 +22,10 @@
  * 	
  */ 
 
+#if HAVE_CONFIG_H
+#  include <config.h>
+#endif
+
 #include <Xfwf/RegExp.h>
 #include <regexp.h>
 

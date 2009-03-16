@@ -1,3 +1,6 @@
+#if HAVE_CONFIG_H
+#  include <config.h>
+#endif
 #ifndef NO_XPM
 /*
 Version 1.2	Added cvtIconDestructor

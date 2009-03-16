@@ -30,6 +30,10 @@
  *  cwikla@wri.com
 */
 
+#if HAVE_CONFIG_H
+#  include <config.h>
+#endif
+
 #include <X11/Xlib.h>
 #include <X11/Xlibint.h>
 #include <X11/Xutil.h>

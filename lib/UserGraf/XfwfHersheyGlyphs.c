@@ -18,6 +18,10 @@
 
  */
 
+#if HAVE_CONFIG_H
+#  include <config.h>
+#endif
+
 #include <stdio.h>
 #include "XfwfHershey.h"
 #include "Hershey_Fonts/cyrilc.h"

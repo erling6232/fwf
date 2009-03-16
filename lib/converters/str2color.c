@@ -11,6 +11,10 @@
  * Date: 13 Sep 1995
  */
 
+#if HAVE_CONFIG_H
+#  include <config.h>
+#endif
+
 #include <X11/IntrinsicP.h>
 #include <X11/StringDefs.h>
 #include "Converters.h"

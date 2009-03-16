@@ -23,6 +23,10 @@
  |  Bert Bos <bert@let.rug.nl> (31 Oct 1994)
  +--------------------------------------------------------------------*/
 
+#if HAVE_CONFIG_H
+#  include <config.h>
+#endif
+
 #define USE_PTY                                 /* Use ptys or pipes? */
 /* #define USE_CLONE				/* Use /dev/ptym/clone? */
 /* #define USE_PTYIO_H                          /* Use sys/ptyio.h file? */

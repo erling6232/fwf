@@ -20,6 +20,9 @@
 
 /*
  * $Log$
+ * Revision 1.1  2009-02-18 08:02:32  eran
+ * Moved here from ../src
+ *
  * Revision 1.1.1.1  2009-02-09 09:30:23  eran
  * Import of FWF v. 4.0
  *
@@ -33,6 +36,10 @@
  * added rcsid and log, fixed bugs
  * 
  */
+
+#if HAVE_CONFIG_H
+#  include <config.h>
+#endif
 
 #include <limits.h>
 #include <string.h>

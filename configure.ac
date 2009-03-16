@@ -106,8 +106,6 @@ AC_CHECK_FUNCS([clock flock mktemp mkstemp tempnam time times])
 # define XITE_STRING_H     <string.h>
 # define XITE_PARAM_H      <sys/param.h>
 
-
-
 # Common Makefile.def
 AC_SUBST(configdir, [\${top_builddir}])
 AC_SUBST(common_makefile, [Makefile.def])

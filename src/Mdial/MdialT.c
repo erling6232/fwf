@@ -32,6 +32,10 @@
 
 
 
+#if HAVE_CONFIG_H
+#  include <config.h>
+#endif
+
 
 #include <X11/Intrinsic.h>
 #include <X11/StringDefs.h>

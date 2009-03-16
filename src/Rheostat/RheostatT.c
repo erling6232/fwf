@@ -5,6 +5,10 @@
  * of the toolkit, you need this too:
  */
  
+#if HAVE_CONFIG_H
+#  include <config.h>
+#endif
+
 #ifdef sgi 
 #define _XEditResCheckMessages _EditResCheckMessages
 #endif

@@ -51,6 +51,10 @@
  * Original Athena Author:  Chris D. Peterson, MIT X Consortium
  */
 
+#if HAVE_CONFIG_H
+#  include <config.h>
+#endif
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>

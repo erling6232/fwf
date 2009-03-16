@@ -2,6 +2,10 @@
    use this, you may get core dumps from xtex. */
 
 
+#if HAVE_CONFIG_H
+#  include <config.h>
+#endif
+
 
 #if ( !defined(lint) && !defined(SABER) )
 static char Xrcsid[] = "$XConsortium: SmeLine.c,v 1.7 89/12/11 15:20:17 kit Exp $";

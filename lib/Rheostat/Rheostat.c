@@ -54,6 +54,10 @@
  *	as per suggestion by Daniel Klein.
  */
 
+#if HAVE_CONFIG_H
+#  include <config.h>
+#endif
+
 #include <stdlib.h>
 #include <math.h>
 

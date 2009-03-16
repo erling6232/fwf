@@ -15,6 +15,10 @@
  * for changing the filter pattern. I guess that makes this a bit overly
  * complicated, but I wanted to show everything.
  */
+#if HAVE_CONFIG_H
+#  include <config.h>
+#endif
+
 #include <stdio.h>
 #include <X11/Intrinsic.h>
 #include <X11/StringDefs.h>

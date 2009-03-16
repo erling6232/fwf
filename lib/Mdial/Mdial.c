@@ -33,6 +33,10 @@
 
 
 
+#if HAVE_CONFIG_H
+#  include <config.h>
+#endif
+
 #include "MdialP.h"
 #include "math.h"
 

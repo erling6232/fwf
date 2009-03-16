@@ -18,6 +18,10 @@
 
  */
 
+#if HAVE_CONFIG_H
+#  include <config.h>
+#endif
+
 #ifdef DEBUG_UGRAF
 #define DEBUG(msg)  printf msg
 #else
