@@ -168,11 +168,11 @@ typedef DIRECTORY Directory;
 
 typedef struct
 {
-	short protections;
-	short orig_mode;
-	short user_id;
-	short group_id;
-	long size;
+	mode_t protections;
+	mode_t orig_mode;
+	uid_t user_id;
+	gid_t group_id;
+	off_t size;
 	time_t last_access;
 	time_t last_modify;
 	time_t last_status_change;
@@ -185,7 +185,7 @@ typedef	FILE_INFO FileInfo;
 typedef struct
 {
 	char filename[MAX_NAME_LENGTH + 1];
-	short file_type;
+	mode_t file_type;
 	short broken_link;
 	short directory_link;
 	FileInfo self_info;
@@ -205,7 +205,7 @@ typedef DIR_ENTRY DirEntry;
 int	DirectoryOpen();
 void	DirectoryRestart();
 void	DirectoryClose();
-long	DirectoryTellPosition();
+off_t	DirectoryTellPosition();
 void	DirectorySetPosition();
 int	DirectoryReadNextEntry();
 char *	DirectoryPathExpand();
@@ -216,8 +216,8 @@ void	DirEntryDump();
 int	DirectoryOpen(char *dir_name, Directory *dp);
 void	DirectoryRestart(Directory *dp);
 void	DirectoryClose(Directory *dp);
-long	DirectoryTellPosition(Directory *dp);
-void	DirectorySetPosition(Directory *dp, long int pos);
+off_t	DirectoryTellPosition(Directory *dp);
+void	DirectorySetPosition(Directory *dp, off_t pos);
 int	DirectoryReadNextEntry(Directory *dp, DirEntry *de);
 char *	DirectoryPathExpand(char *old_path, char *new_path);
 void	DirEntryDump(FILE *fp, DirEntry *de);

@@ -65,7 +65,7 @@ Directory *dp;
 } /* End DirectoryClose */
 
 
-long DirectoryTellPosition(dp)
+off_t DirectoryTellPosition(dp)
 Directory *dp;
 {
 	return(telldir(DirectoryDir(dp)));
@@ -74,7 +74,7 @@ Directory *dp;
 
 void DirectorySetPosition(dp,pos)
 Directory *dp;
-long pos;
+off_t pos;
 {
 	seekdir(dp->filep,pos);			/* BB, 8 Mar 95 */
 } /* End DirectorySetPosition */
@@ -84,7 +84,7 @@ int DirectoryReadNextEntry(dp,de)
 Directory *dp;
 DirEntry *de;
 {
-	u_short orig_file_type;
+	mode_t orig_file_type;
 	static struct dirent *_ep;
 	static struct stat _lstats,_stats;
 	char full_path[MAXPATHLEN + 2];

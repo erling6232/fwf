@@ -98,13 +98,13 @@ typedef struct
 	DIRECTORY dir;
 	DIR_ENTRY *data;
 	DIR_ENTRY **sorted_ptrs;
-	int total_count;
-	int filtered_count;
+	size_t total_count;
+	size_t filtered_count;
 	PFI filter_func;
 	char *filter_data;
 	int free_filter_data;
 	PFI comp_func;
-	int current_index;
+	size_t current_index;
 } DIRECTORY_MGR;
 
 typedef	DIRECTORY_MGR DirectoryMgr;

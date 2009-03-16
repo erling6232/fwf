@@ -122,7 +122,7 @@ int free_data;
 {
 	DirectoryMgr *dm;
 
-	dm = (DirectoryMgr *)calloc(1,sizeof(DirectoryMgr));
+	dm = (DirectoryMgr *)calloc((size_t) 1,sizeof(DirectoryMgr));
 	if (dm == NULL)
 	{
 		fprintf(stderr,"DirectoryMgrOpen: out of memory\n");
@@ -178,7 +178,8 @@ int f_free;
 int DirectoryMgrRefresh(dm)
 DirectoryMgr *dm;
 {
-	int err,data_size,ptrs_size,i;
+	int err;
+	size_t data_size,ptrs_size,i;
 	DirEntryCons *head,*tail,*cons;
 	DirEntry *dm_data,**dm_ptrs;
 	PFI f_func;
@@ -266,7 +267,7 @@ PFI c_func;
 	DirectoryMgrCompFunc(dm) = c_func;
 	if (c_func != NULL)
 	{
-		qsort(DirectoryMgrSortedPtrs(dm),DirectoryMgrFilteredCount(dm),
+		qsort(DirectoryMgrSortedPtrs(dm), DirectoryMgrFilteredCount(dm),
 		      sizeof(DirEntry *),DirectoryMgrCompFunc(dm));
 	}
 	DirectoryMgrRestart(dm);
@@ -283,7 +284,7 @@ DirectoryMgr *dm;
 int i;
 {
 	if (i < 0 || i >= DirectoryMgrFilteredCount(dm)) return(FALSE);
-	DirectoryMgrCurrentIndex(dm) = i;
+	DirectoryMgrCurrentIndex(dm) = (size_t) i;
 	return(TRUE);
 } /* End DirectoryMgrGotoItem */
 
@@ -292,7 +293,7 @@ int DirectoryMgrGotoNamedItem(dm,name)
 DirectoryMgr *dm;
 char *name;
 {
-	int i;
+	size_t i;
 	DirEntry *entry;
 
 	for (i = 0; i < DirectoryMgrFilteredCount(dm); i++)
@@ -318,7 +319,7 @@ DirectoryMgr *dm;
 DirEntry *DirectoryMgrCurrentEntry(dm)
 DirectoryMgr *dm;
 {
-	int index;
+	size_t index;
 
 	index = DirectoryMgrCurrentIndex(dm);
 	if (index < 0 || index >= DirectoryMgrFilteredCount(dm)) return(NULL);
@@ -329,7 +330,7 @@ DirectoryMgr *dm;
 DirEntry *DirectoryMgrNextEntry(dm)
 DirectoryMgr *dm;
 {
-	int index;
+	size_t index;
 
 	index = DirectoryMgrCurrentIndex(dm);
 	if (index >= DirectoryMgrFilteredCount(dm)) return(NULL);
@@ -341,7 +342,7 @@ DirectoryMgr *dm;
 DirEntry *DirectoryMgrPrevEntry(dm)
 DirectoryMgr *dm;
 {
-	int index;
+	size_t index;
 
 	index = DirectoryMgrCurrentIndex(dm) - 1;
 	if (index < 0) return(NULL);
@@ -462,16 +463,14 @@ DirEntry **e1p,**e2p;
 int DirectoryMgrCompareLastAccessAscending(e1p,e2p)
 DirEntry **e1p,**e2p;
 {
-	return((long)DirEntryLastAccess(*e1p) >
-	       (long)DirEntryLastAccess(*e2p));
+	return(DirEntryLastAccess(*e1p) > DirEntryLastAccess(*e2p));
 } /* End DirectoryMgrCompareLastAccessAscending */
 
 
 int DirectoryMgrCompareLastAccessDescending(e1p,e2p)
 DirEntry **e1p,**e2p;
 {
-	return((long)DirEntryLastAccess(*e1p) <
-	       (long)DirEntryLastAccess(*e2p));
+	return(DirEntryLastAccess(*e1p) < DirEntryLastAccess(*e2p));
 } /* End DirectoryMgrCompareLastAccessDescending */
 
 /*---------------------------------------------------------------------------*
