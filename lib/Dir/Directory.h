@@ -213,13 +213,13 @@ void	DirEntryDump();
 
 #else
 
-int	DirectoryOpen(char *dir_name, Directory *dp);
+int	DirectoryOpen(const char *dir_name, Directory *dp);
 void	DirectoryRestart(Directory *dp);
 void	DirectoryClose(Directory *dp);
 off_t	DirectoryTellPosition(Directory *dp);
 void	DirectorySetPosition(Directory *dp, off_t pos);
 int	DirectoryReadNextEntry(Directory *dp, DirEntry *de);
-char *	DirectoryPathExpand(char *old_path, char *new_path);
+char *	DirectoryPathExpand(const char *old_path, char *new_path);
 void	DirEntryDump(FILE *fp, DirEntry *de);
 
 #endif

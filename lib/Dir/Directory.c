@@ -37,9 +37,7 @@
 
  *--------------------------------------------------------------------------*/
 
-int DirectoryOpen(dir_name,dp)
-char *dir_name;
-Directory *dp;
+int DirectoryOpen(const char *dir_name, Directory *dp)
 {
 	if (DirectoryPathExpand(dir_name,DirectoryPath(dp)) == NULL)
 	{
@@ -185,8 +183,7 @@ DirEntry *de;
 } /* End DirectoryReadNextEntry */
 
 
-char *DirectoryPathExpand(old_path,new_path)
-char *old_path,*new_path;
+char *DirectoryPathExpand(const char *old_path, char *new_path)
 {
 	register char *p;
 	char path[MAXPATHLEN + 2];

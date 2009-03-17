@@ -31,6 +31,7 @@
 #include <Xfwf/RegExp.h>
 #endif
 #include <stdlib.h>
+#include <string.h>
 #include <Xfwf/DirMgr.h>
 
 #define	DIR_MGR_FSM_SIZE 1024
@@ -41,17 +42,17 @@
 
  *---------------------------------------------------------------------------*/
 
-DirectoryMgr *DirectoryMgrSimpleOpen(path,sort_type,pattern)
-char *path;
-int sort_type;
-char *pattern;
+DirectoryMgr *DirectoryMgrSimpleOpen(const char *path, int sort_type, const char *pattern)
 {
 	DirectoryMgr *dm;
 	PFI f_func,s_func;
 	regex_obj *f_data;
+	char *patt;
 
-	if (pattern == NULL) pattern = "*";
-	if (!DirectoryMgrSimpleFilterFunc(pattern,&f_func,&f_data))
+	patt = (char *) malloc(strlen(pattern)+1);
+	strcpy(patt, pattern);
+	if (pattern == NULL) patt = "*";
+	if (!DirectoryMgrSimpleFilterFunc(patt,&f_func,&f_data))
 	{
 		return(NULL);
 	}
@@ -65,9 +66,7 @@ char *pattern;
 } /* End DirectoryMgrSimpleOpen */
 
 
-int DirectoryMgrSimpleRefilter(dm,pattern)
-DirectoryMgr *dm;
-char *pattern;
+int DirectoryMgrSimpleRefilter(DirectoryMgr *dm, const char *pattern)
 {
 	PFI f_func;
 	regex_obj *f_data;
@@ -114,11 +113,8 @@ char *path;
 } /* End DirectoryMgrCanOpen */
 
 
-DirectoryMgr *DirectoryMgrOpen(path,c_func,f_func,f_data,free_data)
-char *path;
-PFI c_func,f_func;
-regex_obj *f_data;
-int free_data;
+DirectoryMgr *DirectoryMgrOpen(const char *path, PFI c_func, PFI f_func,
+                               regex_obj *f_data, int free_data)
 {
 	DirectoryMgr *dm;
 
@@ -359,16 +355,18 @@ DirectoryMgr *dm;
 
  *---------------------------------------------------------------------------*/
 
-int DirectoryMgrSimpleFilterFunc(char *pattern, PFI *ff_ptr, regex_obj **fd_ptr)
+int DirectoryMgrSimpleFilterFunc(const char *pattern, PFI *ff_ptr, regex_obj **fd_ptr)
 {
 #ifndef	NO_REGEXP
 	char regexp[2048];
 
 	*ff_ptr = DirectoryMgrFilterName;
-#ifdef HAVE_REGEXP_H
+#if HAVE_REGEX_H
+	*fd_ptr = (regex_obj *)malloc(sizeof(regex_obj));
+#elif HAVE_REGEXP_H
 	*fd_ptr = (char *)malloc(sizeof(char) * DIR_MGR_FSM_SIZE);
-	if (*fd_ptr == NULL) return(FALSE);
 #endif
+	if (*fd_ptr == NULL) return(FALSE);
 	RegExpPatternToRegExp(pattern,regexp);
 	RegExpCompile(regexp,*fd_ptr,DIR_MGR_FSM_SIZE);
 	fprintf(stderr,"DirectoryMgrSimpleFilterFunc: pattern \"%s\"\n regexp \"%s\"\n", pattern, regexp);

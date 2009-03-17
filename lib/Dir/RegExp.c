@@ -74,8 +74,7 @@ int val;
 } /* End _RegExpError */
 
 
-void RegExpPatternToRegExp(pattern,reg_exp)
-char *pattern,*reg_exp;
+void RegExpPatternToRegExp(const char *pattern, char *reg_exp)
 {
 	int in_bracket;
 

@@ -49,7 +49,7 @@ void	RegExpPatternToRegExp();
 void    RegExpCompile(const char *regexp, regex_obj *fsm_ptr, int fsm_length);
 int     RegExpMatch(const char *string, const regex_obj *fsm_ptr);
 void	_RegExpError(int val);
-void	RegExpPatternToRegExp(char *pattern, char *reg_exp);
+void	RegExpPatternToRegExp(const char *pattern, char *reg_exp);
 
 #endif
 

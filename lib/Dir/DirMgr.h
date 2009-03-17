@@ -164,13 +164,13 @@ int		DirectoryMgrFilterName();
 
 #else
 
-DirectoryMgr *	DirectoryMgrSimpleOpen(char *path, int sort_type,
-			char *pattern);
-int		DirectoryMgrSimpleRefilter(DirectoryMgr *dm, char *pattern);
+DirectoryMgr *	DirectoryMgrSimpleOpen(const char *path, int sort_type,
+			const char *pattern);
+int		DirectoryMgrSimpleRefilter(DirectoryMgr *dm, const char *pattern);
 int		DirectoryMgrSimpleResort(DirectoryMgr *dm, int sort_type);
 
 int		DirectoryMgrCanOpen(char *path);
-DirectoryMgr *	DirectoryMgrOpen(char *path, PFI c_func, PFI f_func,
+DirectoryMgr *	DirectoryMgrOpen(const char *path, PFI c_func, PFI f_func,
 			regex_obj *f_data, int free_data);
 void		DirectoryMgrClose(DirectoryMgr *dm);
 int		DirectoryMgrRefilter(DirectoryMgr *dm, PFI f_func,
@@ -185,7 +185,7 @@ DirEntry *	DirectoryMgrCurrentEntry(DirectoryMgr *dm);
 DirEntry *	DirectoryMgrNextEntry(DirectoryMgr *dm);
 DirEntry *	DirectoryMgrPrevEntry(DirectoryMgr *dm);
 
-int             DirectoryMgrSimpleFilterFunc(char *pattern, PFI *ff_ptr, regex_obj **fd_ptr);
+int             DirectoryMgrSimpleFilterFunc(const char *pattern, PFI *ff_ptr, regex_obj **fd_ptr);
 int		DirectoryMgrSimpleSortingFunc(int sort_type, PFI *sf_ptr);
 
 int		DirectoryMgrCompareName(DirEntry **e1p, DirEntry **e2p);
