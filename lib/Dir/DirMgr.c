@@ -49,9 +49,11 @@ DirectoryMgr *DirectoryMgrSimpleOpen(const char *path, int sort_type, const char
 	regex_obj *f_data;
 	char *patt;
 
-	patt = (char *) malloc(strlen(pattern)+1);
-	strcpy(patt, pattern);
-	if (pattern == NULL) patt = "*";
+	if (pattern == NULL) {
+		patt = "*";
+	} else {
+		patt = strdup(pattern);
+	}
 	if (!DirectoryMgrSimpleFilterFunc(patt,&f_func,&f_data))
 	{
 		return(NULL);

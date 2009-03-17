@@ -30,9 +30,7 @@ static char* usage[] =
 	NULL
 };
 
-int main(argc,argv)
-int argc;
-char **argv;
+int main(int argc, char **argv)
 {
 	DIRECTORY_MGR *dm;
 	DIR_ENTRY *de;
