@@ -16,7 +16,7 @@ Description: Test programs for Xfwf widgets
 Package: libfwf
 Section: libs
 Architecture: any
-Depends: ${shlibs:Depends}
+Depends: ${shlibs:Depends}, libxaw7
 Description: Shared libraries for Xfwf widgets
  This package contains the shared libraries used by the
  Xfwf Free Widget Foundation widgets.
@@ -24,7 +24,7 @@ Description: Shared libraries for Xfwf widgets
 Package: libfwf-dev
 Section: devel
 Architecture: any
-Depends: libfwf (= ${Source-Version}), libx11-dev
+Depends: libfwf (= ${Source-Version}), libxaw7-dev
 Description: Development libraries and header files for Xfwf widgets
  This development package contains the static libraries and header files for the
  Xfwf Free Widget Foundation widgets.
