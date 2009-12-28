@@ -23,6 +23,8 @@ libfwf_la_LIBADD = \
 	tabstring/libtabstring.la \
 	TextMenu/libTextMenu.la \
 	Toggle/libToggle.la
+libfwf_la_LDFLAGS = -lXaw -lXmu -lXt -lXpm -version-info 0:0:0
+
 
 SUBDIRS = \
 	Board/ \
