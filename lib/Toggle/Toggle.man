@@ -5,7 +5,7 @@ XfwfToggle \- a button that switches states with every activation
 .SH DESCRIPTION
 The \fIXfwfToggle\fP is a button that switches states with every activation
 (which is by default with every mouse click). The states are named `on' and
-`off'. The states can be indicated with a $\surd$ before the label Two
+`off'. The states can be indicated with a surd before the label Two
 callbacks report the changed state to the application: \fIonCallback\fP is called
 when the button switches to `on', \fIoffCallback\fP is called when the button
 switches back to `off'.
@@ -54,7 +54,7 @@ The variable \fIon\fP records the state of the widget: \fITrue\fP means `on' and
 
 .TP
 .I "XtNonIcon"
-By default, the button displays a $\surd$ when on and nothing when
+By default, the button displays a surd when on and nothing when
 off. The two resources \fIonIcon\fP and \fIoffPIcon\fP can replace these
 two graphics with arbitrary pixmaps. Suggested size for these pixmaps
 is about $16\times18$.
