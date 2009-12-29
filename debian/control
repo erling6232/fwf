@@ -25,7 +25,7 @@ Description: Shared libraries for Xfwf widgets
 Package: libfwf4-dev
 Section: libdevel
 Architecture: any
-Depends: libfwf (= ${binary:Version}), libxaw7-dev
+Depends: libfwf4 (= ${binary:Version}), libxaw7-dev
 Description: Development libraries and header files for Xfwf widgets
  This development package contains the static libraries and header files for the
  Xfwf Free Widget Foundation widgets.
