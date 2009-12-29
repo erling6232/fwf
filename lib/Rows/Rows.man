@@ -1,9 +1,9 @@
 '\" t
 .TH "" 3 "" "Version 3.0" "Free Widget Foundation"
 .SH NAME
-XfwfRows
+XfwfRows \- force all children into tightly packed rows
 .SH DESCRIPTION
-The RowCol widget forces all its children into tightly packed
+The Rows widget forces all its children into tightly packed
 rows. The children keep their preferred size, but the preferred
 position is ignored.
 

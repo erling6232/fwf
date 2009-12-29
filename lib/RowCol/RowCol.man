@@ -1,7 +1,7 @@
 '\" t
 .TH "" 3 "" "Version 3.0" "Free Widget Foundation"
 .SH NAME
-XfwfRowCol
+XfwfRowCol \- force all children into rows and columns
 .SH DESCRIPTION
 The RowCol widget forces all its children into rows and columns. The
 children keep their preferred size, but the preferred position is

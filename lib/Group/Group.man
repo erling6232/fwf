@@ -1,7 +1,7 @@
 '\" t
 .TH "" 3 "" "Version 3.0" "Free Widget Foundation"
 .SH NAME
-XfwfGroup
+XfwfGroup \- arrange children in rows and columns
 .SH DESCRIPTION
 The Group widget is a subclass of RowCol, which means that it
 arranges its children in rows and columns. (See the RowCol widget for

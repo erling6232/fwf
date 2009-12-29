@@ -1,7 +1,7 @@
 '\" t
 .TH "" 3 "" "Version 3.0" "Free Widget Foundation"
 .SH NAME
-XfwfLabel
+XfwfLabel \- display one or more lines of text in a single font
 .SH DESCRIPTION
 The Label class has the capability to display one or more lines of
 text in a single font. Otherwise it is the same as the Board class.

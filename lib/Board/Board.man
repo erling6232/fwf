@@ -1,7 +1,7 @@
 '\" t
 .TH "" 3 "" "Version 3.0" "Free Widget Foundation"
 .SH NAME
-XfwfBoard
+XfwfBoard \- add one thing to the capabilities already present in the Frame class
 .SH DESCRIPTION
 The Board class adds one thing to the capabilities already present
 in the Frame class, viz., location management.

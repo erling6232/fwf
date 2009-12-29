@@ -1,7 +1,7 @@
 '\" t
 .TH "" 3 "" "Version 3.0" "Free Widget Foundation"
 .SH NAME
-XfwfButton
+XfwfButton \- a simple button widget with a single callback
 .SH DESCRIPTION
 The \fIXfwfButton\fP widget is a simple button with a
 single callback \fIactivate_callback\fP. Except for that

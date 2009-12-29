@@ -5,8 +5,7 @@
 ./""
 .TH XfwfCreateArgsList 3 "10 February 1994" "Version 3.x" "Free Widget Foundation"
 .SH NAME
-
-XfwfCreateArgsList - convert a va_list into an XtVarArgsList.  Very
+XfwfCreateArgsList \- convert a va_list into an XtVarArgsList.  Very
 handy for those convenience procedures that create a widget and you
 want to have a Va form available.  Motif is \fBseverly\fP lacking in
 this respect, but then, Motif sucks.

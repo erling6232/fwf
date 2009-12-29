@@ -1,7 +1,7 @@
 '\" t
 .TH "" 3 "" "Version 3.0" "Free Widget Foundation"
 .SH NAME
-XfwfToggle
+XfwfToggle \- a button that switches states with every activation
 .SH DESCRIPTION
 The \fIXfwfToggle\fP is a button that switches states with every activation
 (which is by default with every mouse click). The states are named `on' and

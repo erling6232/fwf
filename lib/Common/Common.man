@@ -1,7 +1,7 @@
 '\" t
 .TH "" 3 "" "Version 3.0" "Free Widget Foundation"
 .SH NAME
-XfwfCommon
+XfwfCommon \- a common superclass for a family of widgets
 .SH DESCRIPTION
 The Common class is not meant to be instantiated. It only serves as
 the common superclass for a family of widgets, to ensure that these

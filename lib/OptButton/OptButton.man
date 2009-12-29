@@ -1,7 +1,7 @@
 '\" t
 .TH "" 3 "" "Version 3.0" "Free Widget Foundation"
 .SH NAME
-XfwfOptionButton
+XfwfOptionButton \- like a PullDown button, with the label set to the label of the last selected menu item
 .SH DESCRIPTION
 The option button is very much like a PullDown button, except that
 the label of the button is automatically set to the label of the last

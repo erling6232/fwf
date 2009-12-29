@@ -2,8 +2,8 @@ cvs checkout fwf
 cd fwf
 cp -u lib/*/*.h include/Xfwf
 
-DEB_BUILD_OPTIONS="parallel=4" dpkg-buildpackage -i -rfakeroot -us -uc
+DEB_BUILD_OPTIONS="parallel=4" dpkg-buildpackage -i -I -rfakeroot -us -uc
 
-# DEB_BUILD_OPTIONS="parallel=4 noopt nostrip" dpkg-buildpackage -i -rfakeroot -us -uc
+# DEB_BUILD_OPTIONS="parallel=4 noopt nostrip" dpkg-buildpackage -i -I -rfakeroot -us -uc
 
 lintian -i ../fwf_4.0.1-1_amd64.changes

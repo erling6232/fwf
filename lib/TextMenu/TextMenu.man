@@ -1,7 +1,7 @@
 '\" t
 .TH "" 3 "" "Version 3.0" "Free Widget Foundation"
 .SH NAME
-XfwfTextMenu
+XfwfTextMenu \- a simple menu widget
 .SH DESCRIPTION
 The TextMenu widget implements a simple menu, consisting of a
 series of labels. It is called `TextMenu' because it has no support

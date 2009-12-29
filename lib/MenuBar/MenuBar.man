@@ -1,7 +1,7 @@
 '\" t
 .TH "" 3 "" "Version 3.0" "Free Widget Foundation"
 .SH NAME
-XfwfMenuBar
+XfwfMenuBar \- a menubar of pulldown buttons
 .SH DESCRIPTION
 The MenuBar widget is a special kind of Rows widget. It assumes
 that all its children are PullDown buttons or other widgets that pop

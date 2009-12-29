@@ -1,7 +1,7 @@
 '\" t
 .TH "" 3 "" "Version 3.0" "Free Widget Foundation"
 .SH NAME
-XfwfPullDown
+XfwfPullDown \- a pulldown menu button widget
 .SH DESCRIPTION
 A PullDown button looks like a normal button, but when it is clicked or
 pressed, a menu drops down. The menu can be specified in two ways: as a

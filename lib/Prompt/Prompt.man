@@ -1,7 +1,7 @@
 '\" t
 .TH "" 3 "" "Version 3.0" "Free Widget Foundation"
 .SH NAME
-XfwfPrompt
+XfwfPrompt \- a short text entry widget
 .SH DESCRIPTION
 The Prompt widget is used for short (no more than a few lines) text
 entry. It can be used in two modes: either with or without a template.

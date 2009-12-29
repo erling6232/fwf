@@ -1,7 +1,7 @@
 '\" t
 .TH "" 3 "" "Version 3.0" "Free Widget Foundation"
 .SH NAME
-XfwfFrame
+XfwfFrame \- draw a frame around widgets that do not have a frame of their own
 .SH DESCRIPTION
 The Frame widget is a composite widget that accepts just one child.
 Its only purpose is to draw a frame around widgets that do not have a
