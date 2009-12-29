@@ -1,6 +1,6 @@
-lib_LTLIBRARIES = libfwf4.la
-libfwf4_la_SOURCES =
-libfwf4_la_LIBADD = \
+lib_LTLIBRARIES = libfwf.la
+libfwf_la_SOURCES =
+libfwf_la_LIBADD = \
 	Board/libBoard.la \
 	Button/libButton.la \
 	Common/libCommon.la \
@@ -23,7 +23,7 @@ libfwf4_la_LIBADD = \
 	tabstring/libtabstring.la \
 	TextMenu/libTextMenu.la \
 	Toggle/libToggle.la
-libfwf4_la_LDFLAGS = -lXaw -lXmu -lXt -lXpm -version-info 4:0:0
+libfwf_la_LDFLAGS = -lXaw -lXmu -lXt -lXpm -version-info 4:0:0
 
 
 SUBDIRS = \
