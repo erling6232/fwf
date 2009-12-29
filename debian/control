@@ -9,7 +9,7 @@ Standards-Version: 3.8.0
 Package: fwf-test
 Section: science
 Architecture: any
-Depends: libfwf4 (= ${binary:Version})
+Depends: libfwf4 (= ${binary:Version}), ${shlibs:Depends}
 Description: Test programs for Xfwf widgets
  This package contains the test programs provided by the
  Xfwf Free Widget Foundation widgets.
@@ -23,6 +23,8 @@ Description: Shared libraries for Xfwf widgets
  Xfwf Free Widget Foundation widgets.
 
 Package: libfwf4-dev
+Provides: libfwf-dev
+Conflicts: libfwf-dev
 Section: libdevel
 Architecture: any
 Depends: libfwf4 (= ${binary:Version}), libxaw7-dev

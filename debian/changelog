@@ -1,4 +1,4 @@
-fwf (4.0.1-1) unstable; urgency=low
+fwf (4.0.1) unstable; urgency=low
 
   * Build using autoconf/automake.
   * Compile for x86 and amd64 processors.
