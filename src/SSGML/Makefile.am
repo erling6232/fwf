@@ -16,7 +16,7 @@ include $(configdir)/@common_makefile@
 #
 
 bin_PROGRAMS = SSGMLT
-LDADD = ../../lib/libfwf.la -lXpm -lXaw
+LDADD = ../../lib/libfwf4.la -lXpm -lXaw
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
 dist_man1_MANS = SSGMLT.man

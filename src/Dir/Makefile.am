@@ -16,5 +16,5 @@ include $(configdir)/@common_makefile@
 #
 
 bin_PROGRAMS = DirectoryT DirMgrT RegExpT
-LDADD = ../../lib/libfwf.la -lXpm -lXaw
+LDADD = ../../lib/libfwf4.la -lXpm -lXaw
 AM_CPPFLAGS = -I$(top_srcdir)/include
