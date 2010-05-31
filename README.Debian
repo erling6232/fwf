@@ -1,5 +1,6 @@
 cvs checkout fwf
-cd fwf
+mv fwf fwf-4.0.1
+cd fwf-4.0.1
 cp -u lib/*/*.h include/Xfwf
 
 DEB_BUILD_OPTIONS="parallel=4" dpkg-buildpackage -i -I -rfakeroot -us -uc
