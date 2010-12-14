@@ -207,12 +207,12 @@ DirectoryMgr *dm;
 			free(cons);
 			break;
 		}
-		fprintf(stderr,"DirectoryMgrRefresh: DirectoryReadNextEntry \"%s\": %d\n", cons->dir_entry.filename, f_func(&(cons->dir_entry),f_data));
+		// fprintf(stderr,"DirectoryMgrRefresh: DirectoryReadNextEntry \"%s\": %d\n", cons->dir_entry.filename, f_func(&(cons->dir_entry),f_data));
 		++ DirectoryMgrTotalCount(dm);
 		if ((f_func == NULL) ||
 		    (f_func && f_func(&(cons->dir_entry),f_data)))
 		{
-			fprintf(stderr,"DirectoryMgrRefresh: Added entry\n");
+			// fprintf(stderr,"DirectoryMgrRefresh: Added entry\n");
 			cons->next = NULL;
 			if (head == NULL)
 				head = cons;
@@ -485,7 +485,7 @@ DirEntry **e1p,**e2p;
 int DirectoryMgrFilterName(DirEntry *de, regex_obj *fsm)
 {
 #ifndef	NO_REGEXP
-	fprintf(stderr,"DirectoryMgrFilterName: compare \"%s\": %d\n", DirEntryFileName(de), RegExpMatch(DirEntryFileName(de),fsm));
+	// fprintf(stderr,"DirectoryMgrFilterName: compare \"%s\": %d\n", DirEntryFileName(de), RegExpMatch(DirEntryFileName(de),fsm));
 	return(RegExpMatch(DirEntryFileName(de),fsm));
 #else
 	return(TRUE);

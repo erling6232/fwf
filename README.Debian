@@ -4,7 +4,10 @@ cd fwf-4.0.1
 cp -u lib/*/*.h include/Xfwf
 
 DEB_BUILD_OPTIONS="parallel=4" dpkg-buildpackage -i -I -rfakeroot
+   and on additional platforms:
+DEB_BUILD_OPTIONS="parallel=4" dpkg-buildpackage -i -I -rfakeroot -B
 
 # DEB_BUILD_OPTIONS="parallel=4 noopt nostrip" dpkg-buildpackage -i -I -rfakeroot
 
 lintian -i ../fwf_4.0.1_amd64.changes
+reprepro -b ~/src/petmr.uib.no include stable fwf_4.0.1_amd64.changes
