@@ -8,10 +8,13 @@ AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_AUX_DIR([build-aux])
 AM_INIT_AUTOMAKE([-Wall foreign])
 
+AM_PROG_AR
+
+LT_INIT
+
 # Checks for programs
 AC_PROG_CC
 AC_PROG_INSTALL
-AC_PROG_LIBTOOL
 AC_PROG_SED
 
 # AM_PROG_CC_C_O
