@@ -2,9 +2,9 @@ Source: fwf
 Section: libs
 Priority: extra
 Maintainer: Erling Andersen <Erling.Andersen@Helse-Bergen.NO>
-Build-Depends: debhelper (>=  6.0.7~), autotools-dev, autoconf, automake,
+Build-Depends: debhelper (>=  10), autotools-dev, autoconf, automake,
 	libtool, libxaw7-dev
-Standards-Version: 3.8.0
+Standards-Version: 4.0.0
 
 Package: fwf-test
 Section: science

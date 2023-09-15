@@ -1,4 +1,4 @@
 debian/tmp/usr/include/Xfwf/*.h
-debian/tmp/usr/lib/libfwf.so
-debian/tmp/usr/lib/libfwf.*a
+debian/tmp/usr/lib/*/libfwf.so
+debian/tmp/usr/lib/*/libfwf.*a
 debian/tmp/usr/share/man/man3/*
