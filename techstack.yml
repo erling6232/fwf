@@ -1,11 +1,11 @@
 repo_name: erling6232/fwf
-report_id: dcb7e355359ebcc1ccae8e9d53cf04d5
+report_id: fcab9af7a98b926ca856f19925abc74b
 repo_type: Public
-timestamp: '2023-11-10T07:45:36+00:00'
+timestamp: '2023-12-14T10:13:32+00:00'
 requested_by: erling6232
 provider: github
 branch: main
-detected_tools_count: 4
+detected_tools_count: 7
 tools:
 - name: C lang
   description: One of the most widely used programming languages of all time
@@ -25,6 +25,17 @@ tools:
   sub_category: Languages
   image_url: https://img.stackshare.io/service/11029/default_075c8240ce6c7ac3a8db41abef5c68eb84207f99.png
   detection_source: Repo Metadata
+- name: pgvector
+  description: Open-source vector similarity search for Postgres
+  website_url: https://github.com/pgvector/pgvector/
+  open_source: false
+  hosted_saas: false
+  category: Data Stores
+  sub_category: Database Tools
+  image_url: https://img.stackshare.io/service/109221/default_b888cdf5617d936aa6aacf130911906955508639.png
+  detection_source: lib/Alert/Alert.txt
+  last_updated_by: eran
+  last_updated_on: 2009-02-17 13:01:16.000000000 Z
 - name: Git
   description: Fast, scalable, distributed revision control system
   website_url: http://git-scm.com/
@@ -34,6 +45,26 @@ tools:
   sub_category: Version Control System
   image_url: https://img.stackshare.io/service/1046/git.png
   detection_source: Repo Metadata
+- name: HTML
+  description: Hypertext Markup Language for creating web pages.
+  website_url: http://
+  open_source: false
+  hosted_saas: false
+  image_url: https://img.stackshare.io/service/2270/no-img-open-source.png
+  detection_source: lib/scroll/SWIP.html
+  last_updated_by: eran
+  last_updated_on: 2009-02-18 10:06:29.000000000 Z
+- name: LangChain
+  description: Build AI apps with LLMs through composability
+  website_url: https://github.com/hwchase17/langchain
+  open_source: true
+  hosted_saas: false
+  category: Communications
+  sub_category: Large Language Model Tools
+  image_url: https://img.stackshare.io/service/48790/default_5b6c6b73f1ff3775c85d2a1ba954cb87e30cbf13.jpg
+  detection_source: lib/Alert/Alert.txt
+  last_updated_by: eran
+  last_updated_on: 2009-02-17 13:01:16.000000000 Z
 - name: Shell
   description: A shell is a text-based terminal, used for manipulating programs and
     files. Shell scripts typically manage program execution.
